@@ -1,7 +1,4 @@
 repositories:
-- name: "repository-index"
-  url: "https://get.mocaccino.org/mocaccino-repository-index"
-  github: "https://github.com/mocaccinoOS/repository-index"
 - name: "mocaccino-desktop-dev"
   url: "https://get.mocaccino.org/mocaccino-desktop"
   github: "https://github.com/mocaccinoOS/desktop"
