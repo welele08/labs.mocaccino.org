@@ -1,0 +1,687 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing net-firewall/iptables-1.8.7 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> net-firewall/iptables-1.8.7
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Linux kernel (2.4&#43;) firewall, NAT and packet mangling tools
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of net-firewall/iptables
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.8.7  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/app-eselect/eselect-iptables">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  eselect-iptables &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-libs/libnetfilter_conntrack">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libnetfilter_conntrack &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-libs/libnftnl">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libnftnl &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-libs/libpcap">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libpcap &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-misc/ethertypes">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  ethertypes &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: &gt;=app-eselect/eselect-iptables-20200508 app-eselect/eselect-iptables virtual/pkgconfig nftables? ( sys-devel/flex virtual/yacc ) virtual/pkgconfig sys-devel/gnuconfig &gt;=app-portage/elt-patches-20170815 || ( &gt;=sys-devel/automake-1.16.2-r1:1.16 ) &gt;=sys-devel/autoconf-2.69 &gt;=sys-devel/libtool-2.4
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: conntrack? ( &gt;=net-libs/libnetfilter_conntrack-1.0.6 ) netlink? ( net-libs/libnfnetlink ) nftables? ( &gt;=net-libs/libmnl-1.0:0= &gt;=net-libs/libnftnl-1.1.6:0= ) pcap? ( net-libs/libpcap ) virtual/os-headers &gt;=sys-kernel/linux-headers-4.4:0
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: conntrack ipv6 netlink nftables pcap static-libs split-usr
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: conntrack? ( &gt;=net-libs/libnetfilter_conntrack-1.0.6 ) netlink? ( net-libs/libnfnetlink ) nftables? ( &gt;=net-libs/libmnl-1.0:0= &gt;=net-libs/libnftnl-1.1.6:0= ) pcap? ( net-libs/libpcap ) &gt;=app-eselect/eselect-iptables-20200508 nftables? ( net-misc/ethertypes ) !&lt;net-firewall/ebtables-2.0.11-r1 !&lt;net-firewall/arptables-0.0.5-r1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: net-firewall/iptables
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: net-firewall/iptables
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 1.8.7
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://www.netfilter.org/projects/iptables/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.netfilter.org/projects/iptables/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/conf.d\/ip6tables" ],
+            
+              [  "etc\/conf.d\/iptables" ],
+            
+              [  "etc\/init.d\/ip6tables" ],
+            
+              [  "etc\/init.d\/iptables" ],
+            
+              [  "lib\/systemd\/system\/ip6tables-restore.service" ],
+            
+              [  "lib\/systemd\/system\/ip6tables-store.service" ],
+            
+              [  "lib\/systemd\/system\/iptables-restore.service" ],
+            
+              [  "lib\/systemd\/system\/iptables-store.service" ],
+            
+              [  "lib64\/libip4tc.so.2" ],
+            
+              [  "lib64\/libip4tc.so.2.0.0" ],
+            
+              [  "lib64\/libip6tc.so.2" ],
+            
+              [  "lib64\/libip6tc.so.2.0.0" ],
+            
+              [  "lib64\/libxtables.so.12" ],
+            
+              [  "lib64\/libxtables.so.12.4.0" ],
+            
+              [  "sbin\/arptables-nft" ],
+            
+              [  "sbin\/arptables-nft-restore" ],
+            
+              [  "sbin\/arptables-nft-save" ],
+            
+              [  "sbin\/ebtables-nft" ],
+            
+              [  "sbin\/ebtables-nft-restore" ],
+            
+              [  "sbin\/ebtables-nft-save" ],
+            
+              [  "sbin\/ip6tables-apply" ],
+            
+              [  "sbin\/ip6tables-legacy" ],
+            
+              [  "sbin\/ip6tables-legacy-restore" ],
+            
+              [  "sbin\/ip6tables-legacy-save" ],
+            
+              [  "sbin\/ip6tables-nft" ],
+            
+              [  "sbin\/ip6tables-nft-restore" ],
+            
+              [  "sbin\/ip6tables-nft-save" ],
+            
+              [  "sbin\/ip6tables-restore-translate" ],
+            
+              [  "sbin\/ip6tables-translate" ],
+            
+              [  "sbin\/iptables-apply" ],
+            
+              [  "sbin\/iptables-legacy" ],
+            
+              [  "sbin\/iptables-legacy-restore" ],
+            
+              [  "sbin\/iptables-legacy-save" ],
+            
+              [  "sbin\/iptables-nft" ],
+            
+              [  "sbin\/iptables-nft-restore" ],
+            
+              [  "sbin\/iptables-nft-save" ],
+            
+              [  "sbin\/iptables-restore-translate" ],
+            
+              [  "sbin\/iptables-translate" ],
+            
+              [  "sbin\/nfbpf_compile" ],
+            
+              [  "sbin\/nfnl_osf" ],
+            
+              [  "sbin\/nfsynproxy" ],
+            
+              [  "sbin\/xtables-legacy-multi" ],
+            
+              [  "sbin\/xtables-monitor" ],
+            
+              [  "sbin\/xtables-nft-multi" ],
+            
+              [  "usr\/bin\/iptables-xml" ],
+            
+              [  "usr\/include\/ip6tables.h" ],
+            
+              [  "usr\/include\/iptables\/internal.h" ],
+            
+              [  "usr\/include\/iptables.h" ],
+            
+              [  "usr\/include\/libiptc\/ipt_kernel_headers.h" ],
+            
+              [  "usr\/include\/libiptc\/libip6tc.h" ],
+            
+              [  "usr\/include\/libiptc\/libiptc.h" ],
+            
+              [  "usr\/include\/libiptc\/libxtc.h" ],
+            
+              [  "usr\/include\/libiptc\/xtcshared.h" ],
+            
+              [  "usr\/include\/xtables-version.h" ],
+            
+              [  "usr\/include\/xtables.h" ],
+            
+              [  "usr\/lib64\/libip4tc.so" ],
+            
+              [  "usr\/lib64\/libip6tc.so" ],
+            
+              [  "usr\/lib64\/libxtables.so" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libip4tc.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libip6tc.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libiptc.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/xtables.pc" ],
+            
+              [  "usr\/lib64\/xtables\/libarpt_mangle.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_802_3.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_among.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_arp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_arpreply.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_dnat.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_ip.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_ip6.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_log.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_mark.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_mark_m.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_nflog.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_pkttype.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_redirect.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_snat.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_stp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libebt_vlan.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_DNAT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_DNPT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_HL.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_LOG.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_MASQUERADE.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_NETMAP.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_REDIRECT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_REJECT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_SNAT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_SNPT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_ah.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_dst.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_eui64.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_frag.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_hbh.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_hl.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_icmp6.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_ipv6header.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_mh.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_rt.so" ],
+            
+              [  "usr\/lib64\/xtables\/libip6t_srh.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_CLUSTERIP.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_DNAT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_ECN.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_LOG.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_MASQUERADE.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_NETMAP.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_REDIRECT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_REJECT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_SNAT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_TTL.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_ULOG.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_ah.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_icmp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_realm.so" ],
+            
+              [  "usr\/lib64\/xtables\/libipt_ttl.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_AUDIT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_CHECKSUM.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_CLASSIFY.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_CONNMARK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_CONNSECMARK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_CT.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_DSCP.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_HMARK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_IDLETIMER.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_LED.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_MARK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_NFLOG.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_NFQUEUE.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_NOTRACK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_RATEEST.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_SECMARK.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_SET.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_SYNPROXY.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TCPMSS.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TCPOPTSTRIP.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TEE.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TOS.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TPROXY.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_TRACE.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_addrtype.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_bpf.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_cgroup.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_cluster.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_comment.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_connbytes.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_connlabel.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_connlimit.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_connmark.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_conntrack.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_cpu.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_dccp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_devgroup.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_dscp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_ecn.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_esp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_hashlimit.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_helper.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_ipcomp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_iprange.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_ipvs.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_length.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_limit.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_mac.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_mark.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_multiport.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_nfacct.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_osf.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_owner.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_physdev.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_pkttype.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_policy.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_quota.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_rateest.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_recent.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_rpfilter.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_sctp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_set.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_socket.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_standard.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_state.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_statistic.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_string.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_tcp.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_tcpmss.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_time.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_tos.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_u32.so" ],
+            
+              [  "usr\/lib64\/xtables\/libxt_udp.so" ],
+            
+              [  "usr\/share\/doc\/iptables-1.8.7\/INCOMPATIBILITIES.bz2" ],
+            
+              [  "usr\/share\/doc\/iptables-1.8.7\/iptables.xslt.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/iptables-xml.1.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/arptables-nft-restore.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/arptables-nft-save.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/arptables-nft.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ebtables-nft.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables-apply.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables-restore-translate.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables-restore.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables-save.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables-translate.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip6tables.8" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-apply.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-extensions.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-restore-translate.8" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-restore.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-save.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/iptables-translate.8" ],
+            
+              [  "usr\/share\/man\/man8\/iptables.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/nfbpf_compile.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/nfnl_osf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/xtables-legacy.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/xtables-monitor.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/xtables-nft.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/xtables-translate.8.bz2" ],
+            
+              [  "usr\/share\/xtables\/pf.os" ],
+            
+              [  "var\/lib\/ip6tables\/.keep_net-firewall_iptables-0" ],
+            
+              [  "var\/lib\/iptables\/.keep_net-firewall_iptables-0" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,973 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/abiword-3.0.4&#43;54 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/abiword-3.0.4&#43;54
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/abiword
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 3.0.4&#43;54  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/gnome-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gnome-common &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 1
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-office/abiword
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-office/abiword">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  abiword &gt;=0 </a>
+  </a></span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/app-text/wv">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  wv &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/abiword" ],
+            
+              [  "usr\/include\/abiword-3.0\/abiwidget.h" ],
+            
+              [  "usr\/include\/abiword-3.0\/libabiword.h" ],
+            
+              [  "usr\/include\/abiword-3.0\/xap_UnixTableWidget.h" ],
+            
+              [  "usr\/include\/wv\/wv.h" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/gi\/overrides\/Abi.py" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/gi\/overrides\/__pycache__\/Abi.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/gi\/overrides\/__pycache__\/Abi.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/gi\/overrides\/__pycache__\/Abi.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/applix.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/babelfish.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/bmp.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/clarisworks.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/command.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/docbook.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/eml.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/freetranslation.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/garble.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/gdict.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/gimp.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/goffice.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/google.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/hancom.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/hrtext.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/iscii.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/kword.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/loadbindings.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/mif.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/mswrite.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/opendocument.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/openwriter.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/openxml.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/opml.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/passepartout.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/pdb.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/pdf.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/presentation.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/s5.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/sdw.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/t602.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/urldict.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/wikipedia.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/wml.so" ],
+            
+              [  "usr\/lib64\/abiword-3.0\/plugins\/xslfo.so" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/Abi-3.0.typelib" ],
+            
+              [  "usr\/lib64\/libabiword-3.0.so" ],
+            
+              [  "usr\/lib64\/libwv-1.2.so.4" ],
+            
+              [  "usr\/lib64\/libwv-1.2.so.4.0.5" ],
+            
+              [  "usr\/lib64\/libwv.so" ],
+            
+              [  "usr\/lib64\/pkgconfig\/abiword-3.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/wv-1.0.pc" ],
+            
+              [  "usr\/share\/abiword-3.0\/Presentation.xml" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/book.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/chip.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/fun.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gear.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomea.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomeb.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomec.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomecorner.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomed.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomedecor1.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomedecor2.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomee.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomeflowers.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/gnomeline.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/idea.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/lamp.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/monitor.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/music1.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/pinceau.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/simca.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/surprise.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/together.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/toolbox.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/tree.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/tux_bordelais.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/weather.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/clipart\/write.png" ],
+            
+              [  "usr\/share\/abiword-3.0\/mime-info\/abiword.keys" ],
+            
+              [  "usr\/share\/abiword-3.0\/omml_xslt\/mml2omml.xsl" ],
+            
+              [  "usr\/share\/abiword-3.0\/omml_xslt\/omml2mml.xsl" ],
+            
+              [  "usr\/share\/abiword-3.0\/readme.abw" ],
+            
+              [  "usr\/share\/abiword-3.0\/readme.txt" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ach.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/af-ZA.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ak.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/am-ET.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ar.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ast-ES.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ayc-BO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/aym-BO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/be-BY.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/be@latin.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/bg-BG.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/bm.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/bn.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/br-FR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/bs.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ca-ES.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/cgg.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/cs-CZ.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/cy-GB.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/da-DK.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/de-CH.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/de-DE.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/el-GR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/en-AU.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/en-CA.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/en-GB.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/en-IE.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/eo.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/es-ES.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/es-MX.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/et.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/eu-ES.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/fa-AF.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ff.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/fi-FI.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/fil.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/fr-FR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ga-IE.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/gl.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/he-IL.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/hi.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/hr-HR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/hu-HU.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/id-ID.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/it-IT.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ja-JP.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/jbo.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/kk-KZ.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/km.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ko.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ku.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/lg.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/lt-LT.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/lv-LV.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/mg-MG.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/mk-MK.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/mnk-SN.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ms-MY.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/nb-NO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ne-NP.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/nl-NL.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/nn-NO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/pl-PL.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ps.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/pt-BR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/pt-PT.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/quh-BO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/qul-BO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/quz.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ro-RO.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ru-RU.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sc-IT.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sk-SK.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sl-SI.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/son.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sq-AL.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sr.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sr@latin.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sv-SE.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/sw.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/ta-IN.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/th.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/tr-TR.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/uk-UA.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/vi-VN.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/wo-SN.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/yi.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/zh-CN.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/zh-HK.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/zh-TW.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/strings\/zu.strings" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-CP1254" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-KOI8-R" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-KOI8-U" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-KOI8-UB" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-am-ET" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ar" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ar-EG" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ar-SA" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-bg-BG" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ca-ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-cs-CZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-da-DK" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-de" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-de-AT" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-de-CH" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-de-DE" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-div-MV" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-el-GR" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-AU" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-CA" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-GB" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-IE" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-NZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-US" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-en-ZA" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-es" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-es-ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-es-MX" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-eu" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-eu-ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fa-IR" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fi-FI" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fr" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fr-BE" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fr-CA" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fr-CH" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-fr-FR" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-gl-ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-he" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-he-IL" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-hu-HU" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-it-IT" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ja-JP" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-kk-KZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-lt-LT" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-nb-NO" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-nl-NL" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-nn-NO" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-pl-PL" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ps" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-pt-BR" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-pt-PT" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ro" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ro-RO" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ru" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ru-RU" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-sk-SK" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-sk-SK.CP1250" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-sl" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-sv" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-sv-SE" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-syr" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-tr" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-tr-TR" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-tr-TR.CP1254" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-uk-UA" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-ur-PK" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-yi" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-zh-CN" ],
+            
+              [  "usr\/share\/abiword-3.0\/system.profile-zh-TW" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/A4.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Business-Letter.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Business-Report.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Employee-Directory.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Fax-Coversheet.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Friendly-Letter.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Memo.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Press-Release.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Resume.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/Two-Columns.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/US-Letter.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-am_ET" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ar" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ar_EG" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ar_SA" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-bg_BG" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ca_ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-cs_CZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-da_DK" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-de" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-de_AT" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-de_CH" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-de_DE" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-div_MV" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-el_GR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_AU" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_CA" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_GB" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_IE" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_NZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-en_ZA" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-es" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-es_AR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-es_ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-es_IR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-es_MX" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fa_IR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fi_FI" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fr" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fr_BE" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fr_CA" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fr_CH" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-fr_FR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-gl_ES" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-he" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-he_IL" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-hu_HU" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-it_IT" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ja_JP" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-kk_KZ" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-km_KH" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-lt_LT" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-nb_NO" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-nl_NL" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-nn_NO" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-pl_PL" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ps" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-pt_BR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-pt_PT" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ro" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ro_RO" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ru" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ru_RU" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-sk_SK" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-sl" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-sv" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-sv_SE" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-syr" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-tr" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-tr_TR" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-uk_UA" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-ur_PK" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-yi" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-zh_CN" ],
+            
+              [  "usr\/share\/abiword-3.0\/templates\/normal.awt-zh_TW" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Annotation.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Border_Shading.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Break.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Field.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_FormatFootnotes.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_FormatFrame.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_FormatTOC.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_FormatTable.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Goto.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_HdrFtr.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_InsertTable.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Insert_DateTime.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Latex.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_MailMerge.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_MetaData.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_New.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Options.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Options_ColorSel.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_PageNumbers.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_PageSetup.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_RDFEditor.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_RDFQuery.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Replace.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_SemanticStylesheets.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Styles.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Stylist.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_Tab.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/ap_UnixDialog_WordCount.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/pd_RDFContact.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/pd_RDFEvent.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/pd_RDFInsertReference.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/pd_RDFLocation.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_DocComparison.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_Encoding.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_History.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_Image.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_Language.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_ListDocuments.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_Password.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_PluginManager.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_WindowMore.ui" ],
+            
+              [  "usr\/share\/abiword-3.0\/ui\/xap_UnixDlg_Zoom.ui" ],
+            
+              [  "usr\/share\/appdata\/abiword.appdata.xml" ],
+            
+              [  "usr\/share\/applications\/abiword.desktop" ],
+            
+              [  "usr\/share\/doc\/abiword-3.0.5\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/abiword-3.0.5\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/abiword-3.0.5\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/wv-1.2.9-r2\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/wv-1.2.9-r2\/README.bz2" ],
+            
+              [  "usr\/share\/gir-1.0\/Abi-3.0.gir" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/256x256\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/512x512\/apps\/abiword.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/abiword.svg" ],
+            
+              [  "usr\/share\/man\/man1\/abiword.1.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,789 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing dev-libs/gobject-introspection-1.68.0 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> dev-libs/gobject-introspection-1.68.0
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Introspection system for GObject-based libraries
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of dev-libs/gobject-introspection
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.68.0  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> LGPL-2&#43; GPL-2&#43; </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-lang-3.9/python">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  python &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-lang-2/python-exec">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  python-exec &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs-2/glib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  glib &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/gobject-introspection-common">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gobject-introspection-common &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/virtual/pkgconfig">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  pkgconfig &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: app-arch/xz-utils &gt;=dev-util/meson-0.56.0 &gt;=dev-util/ninja-1.8.2 dev-util/meson-format-array
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: &gt;=dev-libs/gobject-introspection-common-1.68.0 &gt;=dev-libs/glib-2.58.0:2 dev-libs/libffi:= doctool? ( python_single_target_python3_8? ( dev-python/mako[python_targets_python3_8(-)] dev-python/markdown[python_targets_python3_8(-)] ) python_single_target_python3_9? ( dev-python/mako[python_targets_python3_9(-)] dev-python/markdown[python_targets_python3_9(-)] ) python_single_target_python3_10? ( dev-python/mako[python_targets_python3_10(-)] dev-python/markdown[python_targets_python3_10(-)] ) ) virtual/pkgconfig python_single_target_python3_8? ( dev-lang/python:3.8[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_8] ) python_single_target_python3_9? ( dev-lang/python:3.9[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_10? ( dev-lang/python:3.10[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_10] ) gtk-doc? ( &gt;=dev-util/gtk-doc-1.19 app-text/docbook-xml-dtd:4.3 app-text/docbook-xml-dtd:4.5 ) sys-devel/bison sys-devel/flex test? ( x11-libs/cairo[glib] python_single_target_python3_8? ( dev-python/mako[python_targets_python3_8(-)] dev-python/markdown[python_targets_python3_8(-)] ) python_single_target_python3_9? ( dev-python/mako[python_targets_python3_9(-)] dev-python/markdown[python_targets_python3_9(-)] ) python_single_target_python3_10? ( dev-python/mako[python_targets_python3_10(-)] dev-python/markdown[python_targets_python3_10(-)] ) ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: doctool gtk-doc test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: &gt;=dev-libs/gobject-introspection-common-1.68.0 &gt;=dev-libs/glib-2.58.0:2 dev-libs/libffi:= doctool? ( python_single_target_python3_8? ( dev-python/mako[python_targets_python3_8(-)] dev-python/markdown[python_targets_python3_8(-)] ) python_single_target_python3_9? ( dev-python/mako[python_targets_python3_9(-)] dev-python/markdown[python_targets_python3_9(-)] ) python_single_target_python3_10? ( dev-python/mako[python_targets_python3_10(-)] dev-python/markdown[python_targets_python3_10(-)] ) ) virtual/pkgconfig python_single_target_python3_8? ( dev-lang/python:3.8[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_8] ) python_single_target_python3_9? ( dev-lang/python:3.9[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_9] ) python_single_target_python3_10? ( dev-lang/python:3.10[xml] &gt;=dev-lang/python-exec-2:=[python_targets_python3_10] )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: dev-libs/gobject-introspection
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: dev-libs/gobject-introspection
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 1.68.0
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://wiki.gnome.org/Projects/GObjectIntrospection" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://wiki.gnome.org/Projects/GObjectIntrospection </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/g-ir-annotation-tool" ],
+            
+              [  "usr\/bin\/g-ir-compiler" ],
+            
+              [  "usr\/bin\/g-ir-generate" ],
+            
+              [  "usr\/bin\/g-ir-inspect" ],
+            
+              [  "usr\/bin\/g-ir-scanner" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giarginfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gibaseinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gicallableinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giconstantinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gienuminfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gifieldinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gifunctioninfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giinterfaceinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giobjectinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gipropertyinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giregisteredtypeinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/girepository.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/girffi.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gisignalinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gistructinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gitypeinfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gitypelib.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/gitypes.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giunioninfo.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giversion.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/giversionmacros.h" ],
+            
+              [  "usr\/include\/gobject-introspection-1.0\/givfuncinfo.h" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/DBus-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/DBusGLib-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GIRepository-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GL-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GLib-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GModule-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/GObject-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/Gio-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/Vulkan-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/cairo-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/fontconfig-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/freetype2-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/libxml2-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/win32-1.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/xfixes-4.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/xft-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/xlib-2.0.typelib" ],
+            
+              [  "usr\/lib64\/girepository-1.0\/xrandr-1.3.typelib" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__init__.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/__init__.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/__init__.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/__init__.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/_version.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/_version.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/_version.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationmain.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationmain.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationmain.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationparser.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationparser.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/annotationparser.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ast.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ast.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ast.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/cachestore.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/cachestore.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/cachestore.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ccompiler.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ccompiler.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/ccompiler.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/codegen.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/codegen.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/codegen.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docmain.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docmain.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docmain.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docwriter.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docwriter.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/docwriter.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/dumper.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/dumper.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/dumper.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/gdumpparser.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/gdumpparser.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/gdumpparser.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girparser.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girparser.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girparser.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girwriter.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girwriter.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/girwriter.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/introspectablepass.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/introspectablepass.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/introspectablepass.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/maintransformer.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/maintransformer.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/maintransformer.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/mdextensions.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/mdextensions.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/mdextensions.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/message.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/message.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/message.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/msvccompiler.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/msvccompiler.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/msvccompiler.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/pkgconfig.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/pkgconfig.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/pkgconfig.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/scannermain.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/scannermain.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/scannermain.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sectionparser.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sectionparser.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sectionparser.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/shlibs.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/shlibs.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/shlibs.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sourcescanner.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sourcescanner.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/sourcescanner.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/testcodegen.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/testcodegen.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/testcodegen.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/transformer.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/transformer.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/transformer.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/utils.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/utils.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/utils.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/xmlwriter.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/xmlwriter.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/__pycache__\/xmlwriter.cpython-39.pyc" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/_giscanner.cpython-39-x86_64-linux-gnu.so" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/_version.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/annotationmain.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/annotationparser.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/ast.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/cachestore.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/ccompiler.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/codegen.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/docmain.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_doc.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_index.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_method.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_methods.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_properties.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_signals.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_staticmethods.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/_vfuncs.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/base.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/callback.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/class.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/default.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/enum.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/function.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/interface.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/method.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/devdocs\/Gjs\/namespace.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/callback.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/class.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/constructor.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/default.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/enum.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/field.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/function.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/interface.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/method.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/namespace.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/property.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/record.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/signal.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/C\/vfunc.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/callback.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/class.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/constructor.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/default.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/enum.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/field.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/function.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/interface.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/method.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/namespace.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/property.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/record.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/signal.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Gjs\/vfunc.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/callback.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/class.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/constructor.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/default.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/enum.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/field.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/function.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/interface.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/method.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/namespace.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/property.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/record.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/signal.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/Python\/vfunc.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/base.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/class.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/doctemplates\/mallard\/namespace.tmpl" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/docwriter.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/dumper.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/gdumpparser.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/girparser.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/girwriter.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/introspectablepass.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/maintransformer.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/mdextensions.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/message.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/msvccompiler.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/pkgconfig.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/scannermain.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/sectionparser.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/shlibs.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/sourcescanner.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/testcodegen.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/transformer.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/utils.py" ],
+            
+              [  "usr\/lib64\/gobject-introspection\/giscanner\/xmlwriter.py" ],
+            
+              [  "usr\/lib64\/libgirepository-1.0.so" ],
+            
+              [  "usr\/lib64\/libgirepository-1.0.so.1" ],
+            
+              [  "usr\/lib64\/libgirepository-1.0.so.1.0.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/gobject-introspection-1.0.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/gobject-introspection-no-export-1.0.pc" ],
+            
+              [  "usr\/share\/doc\/gobject-introspection-1.68.0\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/gobject-introspection-1.68.0\/README.rst.bz2" ],
+            
+              [  "usr\/share\/doc\/gobject-introspection-1.68.0\/TODO.bz2" ],
+            
+              [  "usr\/share\/gir-1.0\/DBus-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/DBusGLib-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GIRepository-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GL-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GLib-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GModule-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/GObject-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/Gio-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/Vulkan-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/cairo-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/fontconfig-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/freetype2-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/gir-1.2.rnc" ],
+            
+              [  "usr\/share\/gir-1.0\/libxml2-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/win32-1.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/xfixes-4.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/xft-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/xlib-2.0.gir" ],
+            
+              [  "usr\/share\/gir-1.0\/xrandr-1.3.gir" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/gdump.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/annotation.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/annotation.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/drawable.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/drawable.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/everything.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/everything.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/foo.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/foo.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/gimarshallingtests.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/gimarshallingtests.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/gitestmacros.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/regress.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/regress.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/utility.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/utility.h" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/warnlib.c" ],
+            
+              [  "usr\/share\/gobject-introspection-1.0\/tests\/warnlib.h" ],
+            
+              [  "usr\/share\/man\/man1\/g-ir-compiler.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/g-ir-generate.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/g-ir-scanner.1.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

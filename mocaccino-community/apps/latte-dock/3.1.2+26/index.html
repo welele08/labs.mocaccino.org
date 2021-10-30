@@ -1,0 +1,931 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing apps/latte-dock-3.1.2&#43;26 in mocaccino-community </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> apps/latte-dock-3.1.2&#43;26
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-community">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-community
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of apps/latte-dock
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 3.1.2&#43;26  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/plasma">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  plasma &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.jobs: 3
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: kde-misc/latte-dock
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+<h1> Provides </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/mocaccino-community/kde-misc/latte-dock">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  latte-dock &gt;=0 </a>
+  </a></span>
+  
+</div>
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/xdg\/latte-indicators.knsrc" ],
+            
+              [  "etc\/xdg\/latte-layouts.knsrc" ],
+            
+              [  "usr\/bin\/latte-dock" ],
+            
+              [  "usr\/lib64\/qt5\/plugins\/kpackage\/packagestructure\/latte_packagestructure_indicator.so" ],
+            
+              [  "usr\/lib64\/qt5\/plugins\/plasma_containmentactions_lattecontextmenu.so" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/AddItem.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/AddingArea.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/BadgeText.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/CheckBox.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/CheckBoxesColumn.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/ComboBox.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/ComboBoxButton.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/ExternalShadow.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/GlowPoint.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/Header.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/HeaderSwitch.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/IndicatorItem.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/ItemDelegate.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/Label.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/Slider.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/SpinBox.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/SubHeader.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/Switch.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/TextField.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/ToolTip.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/code\/ColorizerTools.js" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/ButtonShadow.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/CheckBoxStyle.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/DefaultListItemBackground.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/MobileCursor.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/MobileTextActionsToolBar.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/RoundShadow.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/SwitchStyle.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/private\/TextFieldFocus.qml" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/components\/qmldir" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/liblatte2plugin.so" ],
+            
+              [  "usr\/lib64\/qt5\/qml\/org\/kde\/latte\/qmldir" ],
+            
+              [  "usr\/share\/applications\/org.kde.latte-dock.desktop" ],
+            
+              [  "usr\/share\/dbus-1\/interfaces\/org.kde.LatteDock.xml" ],
+            
+              [  "usr\/share\/doc\/latte-dock-0.9.12\/CHANGELOG.md.bz2" ],
+            
+              [  "usr\/share\/doc\/latte-dock-0.9.12\/README.md.bz2" ],
+            
+              [  "usr\/share\/icons\/breeze\/applets\/256\/org.kde.latte.plasmoid.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/22x22\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/icons\/hicolor\/scalable\/apps\/latte-dock.svg" ],
+            
+              [  "usr\/share\/knotifications5\/lattedock.notifyrc" ],
+            
+              [  "usr\/share\/kservices5\/plasma-containmentactions-lattecontextmenu.desktop" ],
+            
+              [  "usr\/share\/kservicetypes5\/latte-indicator.desktop" ],
+            
+              [  "usr\/share\/latte\/indicators\/default\/metadata.desktop" ],
+            
+              [  "usr\/share\/latte\/indicators\/default\/package\/config\/config.qml" ],
+            
+              [  "usr\/share\/latte\/indicators\/default\/package\/config\/main.xml" ],
+            
+              [  "usr\/share\/latte\/indicators\/default\/package\/ui\/main.qml" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/metadata.desktop" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/package\/config\/config.qml" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/package\/config\/main.xml" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/package\/ui\/BackLayer.qml" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/package\/ui\/FrontLayer.qml" ],
+            
+              [  "usr\/share\/latte\/indicators\/org.kde.latte.plasma\/package\/ui\/main.qml" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/ar\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/ca\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/cs\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/da\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/el\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/en_GB\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/es\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/et\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/eu\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/fi\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/fr\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/gl\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/it\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/ja\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/ko\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/nl\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/nn\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/pl\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/pt\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/pt_BR\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ro\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/ru\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/sk\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/sl\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/sv\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/uk\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/zh_CN\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/latte-dock.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/latte_indicator_org.kde.latte.default.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/latte_indicator_org.kde.latte.plasma.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/plasma_applet_org.kde.latte.containment.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/plasma_applet_org.kde.latte.plasmoid.mo" ],
+            
+              [  "usr\/share\/locale\/zh_TW\/LC_MESSAGES\/plasma_containmentactions_lattecontextmenu.mo" ],
+            
+              [  "usr\/share\/metainfo\/org.kde.latte-dock.appdata.xml" ],
+            
+              [  "usr\/share\/metainfo\/org.kde.latte.plasmoid.appdata.xml" ],
+            
+              [  "usr\/share\/metainfo\/org.kde.latte.shell.appdata.xml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/code\/AppletIdentifier.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/code\/ColorizerTools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/code\/HeuristicTools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/code\/LayoutManager.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/code\/MathTools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/config\/main.xml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/AUTHORS" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/COPYING" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/blueprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/brownprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/darkgreyprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/goldprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/greenprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/lightskyblueprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/orangeprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/pinkprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/purpleprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/redprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/icons\/wheatprint.jpg" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/AutomaticItemSizer.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/DebugWindow.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/DragDropArea.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/PanelBox.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/ParabolicManager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/RootMouseArea.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/VisibilityManager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/AppletItem.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/HiddenSpacer.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/ItemWrapper.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/ShortcutBadge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/TitleTooltipParent.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/colorizer\/Applet.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/communicator\/Actions.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/communicator\/Engine.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/communicator\/LatteBridge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/indicator\/Bridge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/indicator\/LevelOptions.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/applet\/indicator\/Loader.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/colorizer\/CustomBackground.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/colorizer\/Manager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/ConfigOverlay.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/HeaderSettings.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/SettingsOverlay.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/Visual.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/controls\/Button.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/controls\/RearrangeIcon.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/maxlength\/Ruler.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/editmode\/maxlength\/RulerMouseArea.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/indicators\/Manager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/AppletsContainer.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/EnvironmentActions.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/LayoutsContainer.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/indicator\/Bridge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/indicator\/Loader.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/layouts\/loaders\/Tasks.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/contents\/ui\/main.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/metadata.desktop" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.containment\/metadata.json" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/code\/ColorizerTools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/code\/activitiesTools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/code\/layout.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/code\/tools.js" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/config\/config.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/config\/main.xml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/images\/panel-west.png" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/ContextMenu.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/ParabolicManager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/PulseAudio.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/TasksExtendedManager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/config\/ConfigAppearance.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/config\/ConfigInteraction.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/config\/ConfigPanel.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/indicators\/Manager.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/indicators\/options\/Latte.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/indicators\/styles\/LatteIndicator.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/main.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/previews\/ToolTipDelegate2.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/previews\/ToolTipInstance.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/previews\/ToolTipWindowMouseArea.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/AudioStream.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/HiddenSpacer.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/IconItem.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/ProgressOverlay.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/ShortcutBadge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/SubWindows.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/TaskItem.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/TitleTooltipParent.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/Wrapper.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/ClickedAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/FastRestoreAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/LauncherAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/NewWindowAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/RealRemovalAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/RemoveWindowFromGroupAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/RestoreAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/animations\/ShowWindowAnimation.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/indicator\/Bridge.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/indicator\/LevelOptions.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/task\/indicator\/Loader.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/taskslayout\/MouseHandler.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/taskslayout\/ScrollEdgeShadows.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/taskslayout\/ScrollOpacityMask.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/taskslayout\/ScrollPositioner.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/contents\/ui\/taskslayout\/ScrollableList.qml" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/metadata.desktop" ],
+            
+              [  "usr\/share\/plasma\/plasmoids\/org.kde.latte.plasmoid\/metadata.json" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/LatteDockConfiguration.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/LatteDockSecondaryConfiguration.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/config.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/pages\/AppearanceConfig.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/pages\/BehaviorConfig.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/pages\/EffectsConfig.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/configuration\/pages\/TasksConfig.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/controls\/CustomIndicatorButton.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/controls\/InnerShadow.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/controls\/TypeSelection.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/defaults" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/images\/AUTHORS" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/images\/COPYING" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/images\/splitter.svgz" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/images\/trademark.svgz" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/layouts\/Default.latterc" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/layouts\/Extended.latterc" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/layouts\/Plasma.latterc" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/layouts\/Unity.latterc" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/presets\/Default.layout.latte" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/presets\/Extended.layout.latte" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/presets\/Plasma.layout.latte" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/presets\/Unity.layout.latte" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/presets\/multiple-layouts_hidden.layout.latte" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/scripting\/BackgroundTracer.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/views\/InfoView.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/contents\/views\/Panel.qml" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/metadata.desktop" ],
+            
+              [  "usr\/share\/plasma\/shells\/org.kde.latte.shell\/metadata.json" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

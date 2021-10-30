@@ -1,0 +1,868 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing system/dracut-050&#43;1 in mocaccino-musl-universe-stable </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> system/dracut-050&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-musl-universe-stable">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-musl-universe-stable
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of system/dracut
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 050&#43;1  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/shells/bash">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bash &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/libs/musl-fts">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  musl-fts &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.owner: dracutdevs
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.repo: dracut
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://dracut.wiki.kernel.org" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://dracut.wiki.kernel.org </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/dracut.conf" ],
+            
+              [  "usr\/bin\/dracut" ],
+            
+              [  "usr\/bin\/dracut-catimages" ],
+            
+              [  "usr\/bin\/lsinitrd" ],
+            
+              [  "usr\/bin\/mkinitrd" ],
+            
+              [  "usr\/lib\/dracut\/dracut-functions" ],
+            
+              [  "usr\/lib\/dracut\/dracut-functions.sh" ],
+            
+              [  "usr\/lib\/dracut\/dracut-init.sh" ],
+            
+              [  "usr\/lib\/dracut\/dracut-initramfs-restore" ],
+            
+              [  "usr\/lib\/dracut\/dracut-install" ],
+            
+              [  "usr\/lib\/dracut\/dracut-logger.sh" ],
+            
+              [  "usr\/lib\/dracut\/dracut-version.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00bash\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00bootchart\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00dash\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00mksh\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00systemd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00warpclock\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/00warpclock\/warpclock.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01fips\/fips-boot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01fips\/fips-load-crypto.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01fips\/fips-noboot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01fips\/fips.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01fips\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/01systemd-initrd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/02caps\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/02caps\/caps.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/02caps\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/02systemd-networkd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/03modsign\/load-modsign-keys.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/03modsign\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/03rescue\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/04watchdog\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/04watchdog\/watchdog-stop.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/04watchdog\/watchdog.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/05busybox\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/06rngd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/06rngd\/rngd.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/10i18n\/10-console.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/10i18n\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/10i18n\/console_init.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/10i18n\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/10i18n\/parse-i18n.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/30convertfs\/convertfs.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/30convertfs\/do-convertfs.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/30convertfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/dhclient-script.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/dhclient.conf" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/ifup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/kill-dhclient.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/net-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-bond.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-bridge.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-ibft.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-ifname.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-ip-opts.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-team.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-legacy\/parse-vlan.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-manager\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-manager\/nm-config.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/35network-manager\/nm-run.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/40network\/dhcp-root.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/40network\/ifname-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/40network\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/40network\/net-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/40network\/netroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/45ifcfg\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/45ifcfg\/write-ifcfg.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/45url-lib\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/45url-lib\/url-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50drm\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50gensplash\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50gensplash\/gensplash-emergency.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50gensplash\/gensplash-newroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50gensplash\/gensplash-pretrigger.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50gensplash\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50plymouth\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50plymouth\/plymouth-emergency.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50plymouth\/plymouth-newroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50plymouth\/plymouth-populate-initrd.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/50plymouth\/plymouth-pretrigger.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80cms\/cms-write-ifcfg.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80cms\/cmsifup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80cms\/cmssetup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80cms\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80lvmmerge\/README.md" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80lvmmerge\/lvmmerge.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/80lvmmerge\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/81cio_ignore\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/81cio_ignore\/parse-cio_accept.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90btrfs\/80-btrfs.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90btrfs\/btrfs_device_ready.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90btrfs\/btrfs_finished.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90btrfs\/btrfs_timeout.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90btrfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/crypt-cleanup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/crypt-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/crypt-run-generator.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/cryptroot-ask.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/parse-crypt.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/parse-keydev.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90crypt\/probe-keydev.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dm\/11-dm.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dm\/59-persistent-storage-dm.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dm\/dm-pre-udev.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dm\/dm-shutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dm\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmraid\/61-dmraid-imsm.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmraid\/dmraid.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmraid\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmraid\/parse-dm.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/apply-live-updates.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/checkisomd5@.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/dmsquash-generator.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/dmsquash-live-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/dmsquash-live-root.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/dmsquash-liveiso-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/iso-scan.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/parse-dmsquash-live.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live\/parse-iso-scan.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90dmsquash-live-ntfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90kernel-modules\/insmodpost.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90kernel-modules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90kernel-modules\/parse-kernel.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90kernel-modules-extra\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90kernel-network-modules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90livenet\/fetch-liveupdate.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90livenet\/livenet-generator.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90livenet\/livenetroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90livenet\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90livenet\/parse-livenet.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90lvm\/64-lvm.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90lvm\/lvm_scan.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90lvm\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90lvm\/parse-lvm.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/59-persistent-storage-md.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/65-md-incremental-imsm.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/md-noddf.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/md-noimsm.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/md-shutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdmon-pre-shutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdmon-pre-udev.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdraid-cleanup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdraid-needshutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdraid-waitclean.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/mdraid_start.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90mdraid\/parse-md.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/multipath-shutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/multipathd-needshutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/multipathd-stop.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/multipathd.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90multipath\/multipathd.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90ppcmac\/load-thermal.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90ppcmac\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90qemu\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90qemu-net\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90stratis\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90stratis\/stratisd-init.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90stratis\/stratisd-start.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/90stratis\/stratisd-stop.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91crypt-gpg\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91crypt-gpg\/crypt-gpg-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91crypt-gpg\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91crypt-loop\/crypt-loop-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91crypt-loop\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91zipl\/install_zipl_cmdline.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91zipl\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/91zipl\/parse-zipl.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95cifs\/cifs-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95cifs\/cifsroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95cifs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95cifs\/parse-cifsroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd\/parse-dasd.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd_mod\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd_mod\/parse-dasd-mod.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd_rules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dasd_rules\/parse-dasd.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dcssblk\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95dcssblk\/parse-dcssblk.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95debug\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/cleanup-fcoe.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/fcoe-edd.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/fcoe-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/fcoe-up.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/lldpad.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/parse-fcoe.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe\/stop-fcoe.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe-uefi\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fcoe-uefi\/parse-uefifcoe.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fstab-sys\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95fstab-sys\/mount-sys.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95iscsi\/cleanup-iscsi.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95iscsi\/iscsiroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95iscsi\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95iscsi\/mount-lun.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95iscsi\/parse-iscsiroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95lunmask\/fc_transport_scan_lun.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95lunmask\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95lunmask\/parse-lunmask.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95lunmask\/sas_transport_scan_lun.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nbd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nbd\/nbd-generator.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nbd\/nbdroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nbd\/parse-nbdroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/nfs-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/nfs-start-rpc.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/nfsroot-cleanup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/nfsroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95nfs\/parse-nfsroot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95qeth_rules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95resume\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95resume\/parse-resume.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95resume\/resume.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95rootfs-block\/block-genrules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95rootfs-block\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95rootfs-block\/mount-root.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95rootfs-block\/parse-block.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95rootfs-block\/rootfallback.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95ssh-client\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95terminfo\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95udev-rules\/59-persistent-storage.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95udev-rules\/61-persistent-storage.rules" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95udev-rules\/load-modules.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95udev-rules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95virtfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95virtfs\/mount-virtfs.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95virtfs\/parse-virtfs.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95zfcp\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95zfcp\/parse-zfcp.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95zfcp_rules\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95zfcp_rules\/parse-zfcp.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95znet\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/95znet\/parse-ccw.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/96securityfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/96securityfs\/securityfs.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/97biosdevname\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/97biosdevname\/parse-biosdevname.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/97masterkey\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/97masterkey\/masterkey.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/97masterkey\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-cmdline-ask.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-cmdline-ask.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-cmdline.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-cmdline.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-cmdline.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-emergency.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-emergency.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-initqueue.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-initqueue.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-initqueue.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-mount.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-mount.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-mount.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-mount.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-mount.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-mount.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-pivot.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-pivot.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-pivot.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-trigger.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-trigger.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-trigger.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-udev.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-udev.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-pre-udev.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-shutdown.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-shutdown.service.8.asc" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/dracut-tmpfiles.conf" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/emergency.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98dracut-systemd\/rootfs-generator.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98ecryptfs\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98ecryptfs\/ecryptfs-mount.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98ecryptfs\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98integrity\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98integrity\/evm-enable.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98integrity\/ima-keys-load.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98integrity\/ima-policy-load.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98integrity\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98pollcdrom\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98pollcdrom\/pollcdrom.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98selinux\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98selinux\/selinux-loadpolicy.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/README" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/parse-syslog-opts.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/rsyslog.conf" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/rsyslogd-start.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/rsyslogd-stop.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98syslog\/syslog-cleanup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98usrmount\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/98usrmount\/mount-usr.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/dracut-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/init.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/initqueue.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/loginit.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/memtrace-ko.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/parse-root-opts.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99base\/rdsosreport.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99fs-lib\/fs-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99fs-lib\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99img-lib\/img-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99img-lib\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99shutdown\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99shutdown\/shutdown.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99squash\/clear-squash.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99squash\/init.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99squash\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99squash\/setup-squash.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99squash\/squash-mnt-clear.service" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99uefi-lib\/module-setup.sh" ],
+            
+              [  "usr\/lib\/dracut\/modules.d\/99uefi-lib\/uefi-lib.sh" ],
+            
+              [  "usr\/lib\/dracut\/skipcpio" ],
+            
+              [  "usr\/lib\/kernel\/install.d\/50-dracut.install" ],
+            
+              [  "usr\/lib\/kernel\/install.d\/51-dracut-rescue.install" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/dracut" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/lsinitrd" ],
+            
+              [  "usr\/share\/pkgconfig\/dracut.pc" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

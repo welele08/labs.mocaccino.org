@@ -1,0 +1,645 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing app-text/opensp-1.5.2 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> app-text/opensp-1.5.2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                A free, object-oriented toolkit for SGML parsing and entity management
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of app-text/opensp
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.5.2  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> MIT </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-libs/libnsl">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libnsl &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: net-libs/libnsl:0= nls? ( sys-devel/gettext ) doc? ( app-text/xmlto app-text/docbook-xml-dtd:4.1.2 ) test? ( app-text/docbook-xml-dtd:4.5 app-text/openjade app-text/sgml-common )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: doc nls static-libs test
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: net-libs/libnsl:0=
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-text/opensp
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: app-text/opensp
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 1.5.2-r3
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="http://openjade.sourceforge.net/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> http://openjade.sourceforge.net/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/onsgmls" ],
+            
+              [  "usr\/bin\/osgmlnorm" ],
+            
+              [  "usr\/bin\/ospam" ],
+            
+              [  "usr\/bin\/ospcat" ],
+            
+              [  "usr\/bin\/ospent" ],
+            
+              [  "usr\/bin\/osx" ],
+            
+              [  "usr\/include\/OpenSP\/Allocator.h" ],
+            
+              [  "usr\/include\/OpenSP\/ArcEngine.h" ],
+            
+              [  "usr\/include\/OpenSP\/Attribute.h" ],
+            
+              [  "usr\/include\/OpenSP\/Attributed.h" ],
+            
+              [  "usr\/include\/OpenSP\/Big5CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/Boolean.h" ],
+            
+              [  "usr\/include\/OpenSP\/CharMap.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/CharMap.h" ],
+            
+              [  "usr\/include\/OpenSP\/CharsetDecl.h" ],
+            
+              [  "usr\/include\/OpenSP\/CharsetInfo.h" ],
+            
+              [  "usr\/include\/OpenSP\/CharsetRegistry.h" ],
+            
+              [  "usr\/include\/OpenSP\/CmdLineApp.h" ],
+            
+              [  "usr\/include\/OpenSP\/CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/CodingSystemKit.h" ],
+            
+              [  "usr\/include\/OpenSP\/ConsoleOutput.h" ],
+            
+              [  "usr\/include\/OpenSP\/ContentState.h" ],
+            
+              [  "usr\/include\/OpenSP\/ContentToken.h" ],
+            
+              [  "usr\/include\/OpenSP\/CopyOwner.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/CopyOwner.h" ],
+            
+              [  "usr\/include\/OpenSP\/DescriptorManager.h" ],
+            
+              [  "usr\/include\/OpenSP\/Dtd.h" ],
+            
+              [  "usr\/include\/OpenSP\/EUCJPCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/ElementType.h" ],
+            
+              [  "usr\/include\/OpenSP\/Entity.h" ],
+            
+              [  "usr\/include\/OpenSP\/EntityApp.h" ],
+            
+              [  "usr\/include\/OpenSP\/EntityCatalog.h" ],
+            
+              [  "usr\/include\/OpenSP\/EntityDecl.h" ],
+            
+              [  "usr\/include\/OpenSP\/EntityManager.h" ],
+            
+              [  "usr\/include\/OpenSP\/ErrnoMessageArg.h" ],
+            
+              [  "usr\/include\/OpenSP\/ErrorCountEventHandler.h" ],
+            
+              [  "usr\/include\/OpenSP\/Event.h" ],
+            
+              [  "usr\/include\/OpenSP\/EventGenerator.h" ],
+            
+              [  "usr\/include\/OpenSP\/EventsWanted.h" ],
+            
+              [  "usr\/include\/OpenSP\/ExtendEntityManager.h" ],
+            
+              [  "usr\/include\/OpenSP\/ExternalId.h" ],
+            
+              [  "usr\/include\/OpenSP\/Fixed2CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/Fixed4CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/GenericEventHandler.h" ],
+            
+              [  "usr\/include\/OpenSP\/Hash.h" ],
+            
+              [  "usr\/include\/OpenSP\/HashTable.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/HashTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/HashTableItemBase.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/HashTableItemBase.h" ],
+            
+              [  "usr\/include\/OpenSP\/IList.h" ],
+            
+              [  "usr\/include\/OpenSP\/IListBase.h" ],
+            
+              [  "usr\/include\/OpenSP\/IListIter.h" ],
+            
+              [  "usr\/include\/OpenSP\/IListIterBase.h" ],
+            
+              [  "usr\/include\/OpenSP\/IQueue.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/IQueue.h" ],
+            
+              [  "usr\/include\/OpenSP\/ISet.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/ISet.h" ],
+            
+              [  "usr\/include\/OpenSP\/ISetIter.h" ],
+            
+              [  "usr\/include\/OpenSP\/IdentityCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/InputSource.h" ],
+            
+              [  "usr\/include\/OpenSP\/InternalInputSource.h" ],
+            
+              [  "usr\/include\/OpenSP\/Link.h" ],
+            
+              [  "usr\/include\/OpenSP\/LinkProcess.h" ],
+            
+              [  "usr\/include\/OpenSP\/List.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/List.h" ],
+            
+              [  "usr\/include\/OpenSP\/ListIter.h" ],
+            
+              [  "usr\/include\/OpenSP\/LiteralStorage.h" ],
+            
+              [  "usr\/include\/OpenSP\/Location.h" ],
+            
+              [  "usr\/include\/OpenSP\/Lpd.h" ],
+            
+              [  "usr\/include\/OpenSP\/Markup.h" ],
+            
+              [  "usr\/include\/OpenSP\/Message.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageArg.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageBuilder.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageEventHandler.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageFormatter.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageModule.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageReporter.h" ],
+            
+              [  "usr\/include\/OpenSP\/MessageTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/Mode.h" ],
+            
+              [  "usr\/include\/OpenSP\/NCVector.h" ],
+            
+              [  "usr\/include\/OpenSP\/Named.h" ],
+            
+              [  "usr\/include\/OpenSP\/NamedResource.h" ],
+            
+              [  "usr\/include\/OpenSP\/NamedResourceTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/NamedTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/Notation.h" ],
+            
+              [  "usr\/include\/OpenSP\/NotationStorage.h" ],
+            
+              [  "usr\/include\/OpenSP\/OpenElement.h" ],
+            
+              [  "usr\/include\/OpenSP\/Options.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/Options.h" ],
+            
+              [  "usr\/include\/OpenSP\/OutputByteStream.h" ],
+            
+              [  "usr\/include\/OpenSP\/OutputCharStream.h" ],
+            
+              [  "usr\/include\/OpenSP\/Owner.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/Owner.h" ],
+            
+              [  "usr\/include\/OpenSP\/OwnerTable.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/OwnerTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/ParserApp.h" ],
+            
+              [  "usr\/include\/OpenSP\/ParserEventGeneratorKit.h" ],
+            
+              [  "usr\/include\/OpenSP\/ParserOptions.h" ],
+            
+              [  "usr\/include\/OpenSP\/PointerTable.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/PointerTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/PosixStorage.h" ],
+            
+              [  "usr\/include\/OpenSP\/Ptr.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/Ptr.h" ],
+            
+              [  "usr\/include\/OpenSP\/RangeMap.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/RangeMap.h" ],
+            
+              [  "usr\/include\/OpenSP\/Resource.h" ],
+            
+              [  "usr\/include\/OpenSP\/RewindStorageObject.h" ],
+            
+              [  "usr\/include\/OpenSP\/SGMLApplication.h" ],
+            
+              [  "usr\/include\/OpenSP\/SJISCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/SOEntityCatalog.h" ],
+            
+              [  "usr\/include\/OpenSP\/Sd.h" ],
+            
+              [  "usr\/include\/OpenSP\/SdText.h" ],
+            
+              [  "usr\/include\/OpenSP\/SearchResultMessageArg.h" ],
+            
+              [  "usr\/include\/OpenSP\/SgmlParser.h" ],
+            
+              [  "usr\/include\/OpenSP\/ShortReferenceMap.h" ],
+            
+              [  "usr\/include\/OpenSP\/StdioStorage.h" ],
+            
+              [  "usr\/include\/OpenSP\/StorageManager.h" ],
+            
+              [  "usr\/include\/OpenSP\/StringC.h" ],
+            
+              [  "usr\/include\/OpenSP\/StringOf.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/StringOf.h" ],
+            
+              [  "usr\/include\/OpenSP\/StringResource.h" ],
+            
+              [  "usr\/include\/OpenSP\/SubstTable.h" ],
+            
+              [  "usr\/include\/OpenSP\/Syntax.h" ],
+            
+              [  "usr\/include\/OpenSP\/Text.h" ],
+            
+              [  "usr\/include\/OpenSP\/TranslateCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/TypeId.h" ],
+            
+              [  "usr\/include\/OpenSP\/URLStorage.h" ],
+            
+              [  "usr\/include\/OpenSP\/UTF16CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/UTF8CodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/UnicodeCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/UnivCharsetDesc.h" ],
+            
+              [  "usr\/include\/OpenSP\/Vector.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/Vector.h" ],
+            
+              [  "usr\/include\/OpenSP\/XMLCodingSystem.h" ],
+            
+              [  "usr\/include\/OpenSP\/XcharMap.cxx" ],
+            
+              [  "usr\/include\/OpenSP\/XcharMap.h" ],
+            
+              [  "usr\/include\/OpenSP\/config.h" ],
+            
+              [  "usr\/include\/OpenSP\/constant.h" ],
+            
+              [  "usr\/include\/OpenSP\/macros.h" ],
+            
+              [  "usr\/include\/OpenSP\/rtti.h" ],
+            
+              [  "usr\/include\/OpenSP\/sptchar.h" ],
+            
+              [  "usr\/include\/OpenSP\/types.h" ],
+            
+              [  "usr\/include\/OpenSP\/xnew.h" ],
+            
+              [  "usr\/lib64\/libosp.so" ],
+            
+              [  "usr\/lib64\/libosp.so.5" ],
+            
+              [  "usr\/lib64\/libosp.so.5.0.0" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/ABOUT-NLS.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/AUTHORS.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/BUGS.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/COPYING.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/NEWS.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/archform.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/autoconf.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/build.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/catalog.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/charset.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/features.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/generic.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/ideas.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/index.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/new.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/nsgmls.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sgmldecl.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sgmlnorm.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sgmlsout.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/spam.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/spcat.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/spent.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sx.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sysdecl.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/sysid.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/xml.htm" ],
+            
+              [  "usr\/share\/doc\/opensp-1.5.2-r3\/doc\/xmlwarn.htm" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML32.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML32.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML32.soc" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML4-f.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML4-s.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML4.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML4.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTML4.soc" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTMLlat1.ent" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTMLspec.ent" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/HTMLsym.ent" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/ISOlat1.ent" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/ISOlat1.sgm" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/catalog" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/demo.sgm" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/gensyntax.pl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html-1.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html-1s.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html-s.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html.dtd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/html.soc" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/japan.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/opensp-implied.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/unicode.sd" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/unicode.syn" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/xml.dcl" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/OpenSP\/xml.soc" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/locale\/de\/LC_MESSAGES\/sp5.mo" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/locale\/fr\/LC_MESSAGES\/sp5.mo" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/locale\/ja\/LC_MESSAGES\/sp5.mo" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/locale\/sv\/LC_MESSAGES\/sp5.mo" ],
+            
+              [  "usr\/share\/sgml\/opensp-1.5.2\/locale\/tr\/LC_MESSAGES\/sp5.mo" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

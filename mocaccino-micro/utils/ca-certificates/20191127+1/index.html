@@ -1,0 +1,496 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing utils/ca-certificates-20191127&#43;1 in mocaccino-micro </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> utils/ca-certificates-20191127&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-micro">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-micro
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of utils/ca-certificates
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 20191127&#43;1  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> MPL-1.1 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://packages.debian.org/sid/ca-certificates" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://packages.debian.org/sid/ca-certificates </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/ca-certificates.conf" ],
+            
+              [  "etc\/ssl\/cert.pem" ],
+            
+              [  "etc\/ssl\/certs\/ca-certificates.crt" ],
+            
+              [  "usr\/bin\/c_rehash" ],
+            
+              [  "usr\/sbin\/update-ca-certificates" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/ACCVRAIZ1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AC_RAIZ_FNMT-RCM.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Actalis_Authentication_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AddTrust_Low-Value_Services_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AffirmTrust_Commercial.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AffirmTrust_Networking.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AffirmTrust_Premium.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/AffirmTrust_Premium_ECC.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Amazon_Root_CA_1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Amazon_Root_CA_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Amazon_Root_CA_3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Amazon_Root_CA_4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Atos_TrustedRoot_2011.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Baltimore_CyberTrust_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Buypass_Class_2_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Buypass_Class_3_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/CA_Disig_Root_R2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/CFCA_EV_ROOT.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/COMODO_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/COMODO_ECC_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/COMODO_RSA_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Camerfirma_Chambers_of_Commerce_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Camerfirma_Global_Chambersign_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Certigna.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Certigna_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Certum_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Certum_Trusted_Network_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Certum_Trusted_Network_CA_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Chambers_of_Commerce_Root_-_2008.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Comodo_AAA_Services_root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Cybertrust_Global_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/D-TRUST_Root_CA_3_2013.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/D-TRUST_Root_Class_3_CA_2_2009.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/D-TRUST_Root_Class_3_CA_2_EV_2009.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DST_Root_CA_X3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Assured_ID_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Assured_ID_Root_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Assured_ID_Root_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Global_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Global_Root_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Global_Root_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_High_Assurance_EV_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/DigiCert_Trusted_Root_G4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/E-Tugra_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/EC-ACC.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/EE_Certification_Centre_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Entrust.net_Premium_2048_Secure_Server_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Entrust_Root_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Entrust_Root_Certification_Authority_-_EC1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Entrust_Root_Certification_Authority_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Entrust_Root_Certification_Authority_-_G4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GDCA_TrustAUTH_R5_ROOT.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GTS_Root_R1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GTS_Root_R2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GTS_Root_R3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GTS_Root_R4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Global_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Primary_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Primary_Certification_Authority_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Primary_Certification_Authority_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Universal_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GeoTrust_Universal_CA_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_ECC_Root_CA_-_R4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_ECC_Root_CA_-_R5.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_Root_CA_-_R2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_Root_CA_-_R3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/GlobalSign_Root_CA_-_R6.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Global_Chambersign_Root_-_2008.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Go_Daddy_Class_2_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Go_Daddy_Root_Certificate_Authority_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Hellenic_Academic_and_Research_Institutions_RootCA_2011.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Hongkong_Post_Root_CA_1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Hongkong_Post_Root_CA_3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/ISRG_Root_X1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/IdenTrust_Commercial_Root_CA_1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/IdenTrust_Public_Sector_Root_CA_1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Izenpe.com.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/LuxTrust_Global_Root_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Microsec_e-Szigno_Root_CA_2009.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Network_Solutions_Certificate_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/OISTE_WISeKey_Global_Root_GA_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/OISTE_WISeKey_Global_Root_GB_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/OISTE_WISeKey_Global_Root_GC_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA_1_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA_2_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA_3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/QuoVadis_Root_CA_3_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SSL.com_EV_Root_Certification_Authority_ECC.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SSL.com_Root_Certification_Authority_ECC.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SSL.com_Root_Certification_Authority_RSA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SZAFIR_ROOT_CA2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SecureSign_RootCA11.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SecureTrust_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Secure_Global_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Security_Communication_RootCA2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Security_Communication_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Sonera_Class_2_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Staat_der_Nederlanden_EV_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Staat_der_Nederlanden_Root_CA_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Staat_der_Nederlanden_Root_CA_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Starfield_Class_2_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Starfield_Root_Certificate_Authority_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Starfield_Services_Root_Certificate_Authority_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SwissSign_Gold_CA_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SwissSign_Platinum_CA_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/SwissSign_Silver_CA_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Symantec_Class_1_Public_Primary_Certification_Authority_-_G4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Symantec_Class_1_Public_Primary_Certification_Authority_-_G6.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Symantec_Class_2_Public_Primary_Certification_Authority_-_G4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Symantec_Class_2_Public_Primary_Certification_Authority_-_G6.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/T-TeleSec_GlobalRoot_Class_2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/T-TeleSec_GlobalRoot_Class_3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TWCA_Global_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TWCA_Root_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Taiwan_GRCA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TeliaSonera_Root_CA_v1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TrustCor_ECA-1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TrustCor_RootCert_CA-1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/TrustCor_RootCert_CA-2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Trustis_FPS_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/UCA_Extended_Validation_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/UCA_Global_G2_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/USERTrust_ECC_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/USERTrust_RSA_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/VeriSign_Universal_Root_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Verisign_Class_1_Public_Primary_Certification_Authority_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Verisign_Class_2_Public_Primary_Certification_Authority_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/XRamp_Global_CA_Root.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/certSIGN_ROOT_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/ePKI_Root_Certification_Authority.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/emSign_ECC_Root_CA_-_C3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/emSign_ECC_Root_CA_-_G3.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/emSign_Root_CA_-_C1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/emSign_Root_CA_-_G1.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/thawte_Primary_Root_CA.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/thawte_Primary_Root_CA_-_G2.crt" ],
+            
+              [  "usr\/share\/ca-certificates\/mozilla\/thawte_Primary_Root_CA_-_G3.crt" ],
+            
+              [  "usr\/share\/man\/man8\/update-ca-certificates.8" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

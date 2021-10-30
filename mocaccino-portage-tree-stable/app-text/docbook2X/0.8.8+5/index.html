@@ -1,0 +1,561 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing app-text/docbook2X-0.8.8&#43;5 in mocaccino-portage-tree-stable </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> app-text/docbook2X-0.8.8&#43;5
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree-stable">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree-stable
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of app-text/docbook2X
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 0.8.8&#43;5  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/system-x">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  system-x &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-perl/XML-LibXML">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  XML-LibXML &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-text/docbook2X
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: app-text/docbook2X
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 0.8.8-r4
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/db2x_manxml" ],
+            
+              [  "usr\/bin\/db2x_texixml" ],
+            
+              [  "usr\/bin\/db2x_xsltproc" ],
+            
+              [  "usr\/bin\/docbook2man.pl" ],
+            
+              [  "usr\/bin\/docbook2texi.pl" ],
+            
+              [  "usr\/bin\/docbook2x-man" ],
+            
+              [  "usr\/bin\/docbook2x-texi" ],
+            
+              [  "usr\/bin\/sgml2xml-isoent" ],
+            
+              [  "usr\/bin\/utf8trans" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/AUTHORS" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/NEWS" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/THANKS.bz2" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/TODO.bz2" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/changes.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/charsets.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/cindex.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/db2x_manxml.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/db2x_texixml.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/db2x_xsltproc.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/dependencies.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/design-notes.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/docbook2X.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/docbook2man.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/docbook2texi.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/faq.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/install.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/manpages.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/performance.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/sgml2xml-isoent.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/testing.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/texinfo.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/todo.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/utf8trans.html" ],
+            
+              [  "usr\/share\/doc\/docbook2X-0.8.8-r4\/html\/xsltproc.html" ],
+            
+              [  "usr\/share\/docbook2X\/VERSION" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/roff-small.charmap.xml" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/roff.charmap" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/roff.charmap.xml" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/texi-small.charmap.xml" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/texi.charmap" ],
+            
+              [  "usr\/share\/docbook2X\/charmaps\/texi.charmap.xml" ],
+            
+              [  "usr\/share\/docbook2X\/dtd\/Man-XML" ],
+            
+              [  "usr\/share\/docbook2X\/dtd\/Texi-XML" ],
+            
+              [  "usr\/share\/docbook2X\/dtd\/catalog.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/charmap.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/db2x_manxml.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/db2x_texixml.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/man-html-table.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/man-table.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/backend\/string.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/catalog.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/check-idref.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/cmdsynopsis.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/gentext.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/l10n.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/labels.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/lists.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/messages.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/person.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/string.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/af.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/bg.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/ca.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/cs.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/da.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/de.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/el.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/en.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/es.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/et.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/eu.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/fi.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/fr.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/he.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/hu.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/id.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/it.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/ja.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/ko.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/l10n-set.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/lt.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/nl.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/nn.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/no.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/pl.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/pt-br.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/pt.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/ro.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/ru.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/sk.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/sl.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/sr.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/sv.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/th.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/tr.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/uk.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/vi.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/xh.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/zh-cn.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/text\/zh-tw.xml" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/titles.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/ucase.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/version.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/common\/whitespace.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/admon.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/beginpage.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/block.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/caption.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/docbook.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/formal.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/glossary.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/index.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/info.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/inline.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/keywords.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/lists.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/manpage.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/param.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/pi.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/refentry.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/sectioning.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/sections.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/synop.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/table.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/toc.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/verbatim.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/man\/xref.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/admon.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/autotoc.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/beginpage.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/biblio.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/block.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/callout.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/caption.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/chunk.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/component.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/division.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/docbook.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/footnote.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/force-inline.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/formal.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/glossary.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/graphics.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/index.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/info.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/inline.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/jrefentry.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/keywords.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/lists.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/math.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/menudescrip.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/param.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/pi.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/qandaset.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/refentry.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/sectioning.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/sections.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/synop.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/table.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/texifile.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/texinode-base.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/texinode.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/toc.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/verbatim.xsl" ],
+            
+              [  "usr\/share\/docbook2X\/xslt\/texi\/xref.xsl" ],
+            
+              [  "usr\/share\/info\/docbook2X.info.bz2" ],
+            
+              [  "usr\/share\/info\/docbook2man-xslt.info.bz2" ],
+            
+              [  "usr\/share\/info\/docbook2texi-xslt.info.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/db2x_manxml.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/db2x_texixml.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/db2x_xsltproc.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/docbook2man.pl.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/docbook2texi.pl.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/sgml2xml-isoent.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/utf8trans.1.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

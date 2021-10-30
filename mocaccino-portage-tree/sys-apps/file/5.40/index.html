@@ -1,0 +1,946 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing sys-apps/file-5.40 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> sys-apps/file-5.40
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                identify a file&#39;s format by scanning binary data for patterns
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of sys-apps/file
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 5.40  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/app-arch/bzip2">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bzip2 &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/app-arch/xz-utils">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  xz-utils &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs/libseccomp">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libseccomp &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs/zlib">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  zlib &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: &gt;=app-portage/elt-patches-20170815
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: bzip2? ( app-arch/bzip2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) lzma? ( app-arch/xz-utils[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) python? ( python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_10? ( dev-lang/python:3.10 ) &gt;=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/setuptools[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) zlib? ( &gt;=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: bzip2 lzma python seccomp static-libs zlib python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: bzip2? ( app-arch/bzip2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) lzma? ( app-arch/xz-utils[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) python? ( python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_10? ( dev-lang/python:3.10 ) &gt;=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/setuptools[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] ) zlib? ( &gt;=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) python? ( !dev-python/python-magic ) seccomp? ( sys-libs/libseccomp[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: sys-apps/file
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: sys-apps/file
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 5.40-r3
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://www.darwinsys.com/file/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.darwinsys.com/file/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/bin\/file" ],
+            
+              [  "usr\/include\/magic.h" ],
+            
+              [  "usr\/lib\/libmagic.so" ],
+            
+              [  "usr\/lib\/libmagic.so.1" ],
+            
+              [  "usr\/lib\/libmagic.so.1.0.0" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/__pycache__\/magic.cpython-39.opt-1.pyc" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/__pycache__\/magic.cpython-39.opt-2.pyc" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/__pycache__\/magic.cpython-39.pyc" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/file_magic-0.4.0-py3.9.egg-info\/PKG-INFO" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/file_magic-0.4.0-py3.9.egg-info\/SOURCES.txt" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/file_magic-0.4.0-py3.9.egg-info\/dependency_links.txt" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/file_magic-0.4.0-py3.9.egg-info\/not-zip-safe" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/file_magic-0.4.0-py3.9.egg-info\/top_level.txt" ],
+            
+              [  "usr\/lib\/python3.9\/site-packages\/magic.py" ],
+            
+              [  "usr\/lib64\/libmagic.so" ],
+            
+              [  "usr\/lib64\/libmagic.so.1" ],
+            
+              [  "usr\/lib64\/libmagic.so.1.0.0" ],
+            
+              [  "usr\/lib64\/pkgconfig\/libmagic.pc" ],
+            
+              [  "usr\/share\/doc\/file-5.40-r3\/ChangeLog.bz2" ],
+            
+              [  "usr\/share\/doc\/file-5.40-r3\/MAINT.bz2" ],
+            
+              [  "usr\/share\/doc\/file-5.40-r3\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/file-5.40-r3\/README.python.md.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/file.1.bz2" ],
+            
+              [  "usr\/share\/man\/man3\/libmagic.3.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/magic.5.bz2" ],
+            
+              [  "usr\/share\/misc\/magic\/acorn" ],
+            
+              [  "usr\/share\/misc\/magic\/adi" ],
+            
+              [  "usr\/share\/misc\/magic\/adventure" ],
+            
+              [  "usr\/share\/misc\/magic\/aes" ],
+            
+              [  "usr\/share\/misc\/magic\/algol68" ],
+            
+              [  "usr\/share\/misc\/magic\/allegro" ],
+            
+              [  "usr\/share\/misc\/magic\/alliant" ],
+            
+              [  "usr\/share\/misc\/magic\/amanda" ],
+            
+              [  "usr\/share\/misc\/magic\/amigaos" ],
+            
+              [  "usr\/share\/misc\/magic\/android" ],
+            
+              [  "usr\/share\/misc\/magic\/animation" ],
+            
+              [  "usr\/share\/misc\/magic\/aout" ],
+            
+              [  "usr\/share\/misc\/magic\/apache" ],
+            
+              [  "usr\/share\/misc\/magic\/apl" ],
+            
+              [  "usr\/share\/misc\/magic\/apple" ],
+            
+              [  "usr\/share\/misc\/magic\/application" ],
+            
+              [  "usr\/share\/misc\/magic\/applix" ],
+            
+              [  "usr\/share\/misc\/magic\/apt" ],
+            
+              [  "usr\/share\/misc\/magic\/archive" ],
+            
+              [  "usr\/share\/misc\/magic\/asf" ],
+            
+              [  "usr\/share\/misc\/magic\/assembler" ],
+            
+              [  "usr\/share\/misc\/magic\/asterix" ],
+            
+              [  "usr\/share\/misc\/magic\/att3b" ],
+            
+              [  "usr\/share\/misc\/magic\/audio" ],
+            
+              [  "usr\/share\/misc\/magic\/avm" ],
+            
+              [  "usr\/share\/misc\/magic\/basis" ],
+            
+              [  "usr\/share\/misc\/magic\/beetle" ],
+            
+              [  "usr\/share\/misc\/magic\/ber" ],
+            
+              [  "usr\/share\/misc\/magic\/bflt" ],
+            
+              [  "usr\/share\/misc\/magic\/bhl" ],
+            
+              [  "usr\/share\/misc\/magic\/bioinformatics" ],
+            
+              [  "usr\/share\/misc\/magic\/biosig" ],
+            
+              [  "usr\/share\/misc\/magic\/blackberry" ],
+            
+              [  "usr\/share\/misc\/magic\/blcr" ],
+            
+              [  "usr\/share\/misc\/magic\/blender" ],
+            
+              [  "usr\/share\/misc\/magic\/blit" ],
+            
+              [  "usr\/share\/misc\/magic\/bm" ],
+            
+              [  "usr\/share\/misc\/magic\/bout" ],
+            
+              [  "usr\/share\/misc\/magic\/bsdi" ],
+            
+              [  "usr\/share\/misc\/magic\/bsi" ],
+            
+              [  "usr\/share\/misc\/magic\/btsnoop" ],
+            
+              [  "usr\/share\/misc\/magic\/c-lang" ],
+            
+              [  "usr\/share\/misc\/magic\/c64" ],
+            
+              [  "usr\/share\/misc\/magic\/cad" ],
+            
+              [  "usr\/share\/misc\/magic\/cafebabe" ],
+            
+              [  "usr\/share\/misc\/magic\/cbor" ],
+            
+              [  "usr\/share\/misc\/magic\/cddb" ],
+            
+              [  "usr\/share\/misc\/magic\/chord" ],
+            
+              [  "usr\/share\/misc\/magic\/cisco" ],
+            
+              [  "usr\/share\/misc\/magic\/citrus" ],
+            
+              [  "usr\/share\/misc\/magic\/clarion" ],
+            
+              [  "usr\/share\/misc\/magic\/claris" ],
+            
+              [  "usr\/share\/misc\/magic\/clipper" ],
+            
+              [  "usr\/share\/misc\/magic\/clojure" ],
+            
+              [  "usr\/share\/misc\/magic\/coff" ],
+            
+              [  "usr\/share\/misc\/magic\/commands" ],
+            
+              [  "usr\/share\/misc\/magic\/communications" ],
+            
+              [  "usr\/share\/misc\/magic\/compress" ],
+            
+              [  "usr\/share\/misc\/magic\/console" ],
+            
+              [  "usr\/share\/misc\/magic\/convex" ],
+            
+              [  "usr\/share\/misc\/magic\/coverage" ],
+            
+              [  "usr\/share\/misc\/magic\/cracklib" ],
+            
+              [  "usr\/share\/misc\/magic\/crypto" ],
+            
+              [  "usr\/share\/misc\/magic\/ctags" ],
+            
+              [  "usr\/share\/misc\/magic\/ctf" ],
+            
+              [  "usr\/share\/misc\/magic\/cubemap" ],
+            
+              [  "usr\/share\/misc\/magic\/cups" ],
+            
+              [  "usr\/share\/misc\/magic\/dact" ],
+            
+              [  "usr\/share\/misc\/magic\/database" ],
+            
+              [  "usr\/share\/misc\/magic\/dataone" ],
+            
+              [  "usr\/share\/misc\/magic\/dbpf" ],
+            
+              [  "usr\/share\/misc\/magic\/der" ],
+            
+              [  "usr\/share\/misc\/magic\/diamond" ],
+            
+              [  "usr\/share\/misc\/magic\/dif" ],
+            
+              [  "usr\/share\/misc\/magic\/diff" ],
+            
+              [  "usr\/share\/misc\/magic\/digital" ],
+            
+              [  "usr\/share\/misc\/magic\/dolby" ],
+            
+              [  "usr\/share\/misc\/magic\/dump" ],
+            
+              [  "usr\/share\/misc\/magic\/dyadic" ],
+            
+              [  "usr\/share\/misc\/magic\/ebml" ],
+            
+              [  "usr\/share\/misc\/magic\/edid" ],
+            
+              [  "usr\/share\/misc\/magic\/editors" ],
+            
+              [  "usr\/share\/misc\/magic\/efi" ],
+            
+              [  "usr\/share\/misc\/magic\/elf" ],
+            
+              [  "usr\/share\/misc\/magic\/encore" ],
+            
+              [  "usr\/share\/misc\/magic\/epoc" ],
+            
+              [  "usr\/share\/misc\/magic\/erlang" ],
+            
+              [  "usr\/share\/misc\/magic\/espressif" ],
+            
+              [  "usr\/share\/misc\/magic\/esri" ],
+            
+              [  "usr\/share\/misc\/magic\/fcs" ],
+            
+              [  "usr\/share\/misc\/magic\/filesystems" ],
+            
+              [  "usr\/share\/misc\/magic\/finger" ],
+            
+              [  "usr\/share\/misc\/magic\/flash" ],
+            
+              [  "usr\/share\/misc\/magic\/flif" ],
+            
+              [  "usr\/share\/misc\/magic\/fonts" ],
+            
+              [  "usr\/share\/misc\/magic\/forth" ],
+            
+              [  "usr\/share\/misc\/magic\/fortran" ],
+            
+              [  "usr\/share\/misc\/magic\/frame" ],
+            
+              [  "usr\/share\/misc\/magic\/freebsd" ],
+            
+              [  "usr\/share\/misc\/magic\/fsav" ],
+            
+              [  "usr\/share\/misc\/magic\/fusecompress" ],
+            
+              [  "usr\/share\/misc\/magic\/games" ],
+            
+              [  "usr\/share\/misc\/magic\/gcc" ],
+            
+              [  "usr\/share\/misc\/magic\/gconv" ],
+            
+              [  "usr\/share\/misc\/magic\/geo" ],
+            
+              [  "usr\/share\/misc\/magic\/geos" ],
+            
+              [  "usr\/share\/misc\/magic\/gimp" ],
+            
+              [  "usr\/share\/misc\/magic\/git" ],
+            
+              [  "usr\/share\/misc\/magic\/glibc" ],
+            
+              [  "usr\/share\/misc\/magic\/gnome" ],
+            
+              [  "usr\/share\/misc\/magic\/gnu" ],
+            
+              [  "usr\/share\/misc\/magic\/gnumeric" ],
+            
+              [  "usr\/share\/misc\/magic\/gpt" ],
+            
+              [  "usr\/share\/misc\/magic\/gpu" ],
+            
+              [  "usr\/share\/misc\/magic\/grace" ],
+            
+              [  "usr\/share\/misc\/magic\/graphviz" ],
+            
+              [  "usr\/share\/misc\/magic\/gringotts" ],
+            
+              [  "usr\/share\/misc\/magic\/guile" ],
+            
+              [  "usr\/share\/misc\/magic\/hardware" ],
+            
+              [  "usr\/share\/misc\/magic\/hitachi-sh" ],
+            
+              [  "usr\/share\/misc\/magic\/hp" ],
+            
+              [  "usr\/share\/misc\/magic\/human68k" ],
+            
+              [  "usr\/share\/misc\/magic\/ibm370" ],
+            
+              [  "usr\/share\/misc\/magic\/ibm6000" ],
+            
+              [  "usr\/share\/misc\/magic\/icc" ],
+            
+              [  "usr\/share\/misc\/magic\/iff" ],
+            
+              [  "usr\/share\/misc\/magic\/images" ],
+            
+              [  "usr\/share\/misc\/magic\/inform" ],
+            
+              [  "usr\/share\/misc\/magic\/intel" ],
+            
+              [  "usr\/share\/misc\/magic\/interleaf" ],
+            
+              [  "usr\/share\/misc\/magic\/island" ],
+            
+              [  "usr\/share\/misc\/magic\/ispell" ],
+            
+              [  "usr\/share\/misc\/magic\/isz" ],
+            
+              [  "usr\/share\/misc\/magic\/java" ],
+            
+              [  "usr\/share\/misc\/magic\/javascript" ],
+            
+              [  "usr\/share\/misc\/magic\/jpeg" ],
+            
+              [  "usr\/share\/misc\/magic\/karma" ],
+            
+              [  "usr\/share\/misc\/magic\/kde" ],
+            
+              [  "usr\/share\/misc\/magic\/keepass" ],
+            
+              [  "usr\/share\/misc\/magic\/kerberos" ],
+            
+              [  "usr\/share\/misc\/magic\/kicad" ],
+            
+              [  "usr\/share\/misc\/magic\/kml" ],
+            
+              [  "usr\/share\/misc\/magic\/lammps" ],
+            
+              [  "usr\/share\/misc\/magic\/lecter" ],
+            
+              [  "usr\/share\/misc\/magic\/lex" ],
+            
+              [  "usr\/share\/misc\/magic\/lif" ],
+            
+              [  "usr\/share\/misc\/magic\/linux" ],
+            
+              [  "usr\/share\/misc\/magic\/lisp" ],
+            
+              [  "usr\/share\/misc\/magic\/llvm" ],
+            
+              [  "usr\/share\/misc\/magic\/locoscript" ],
+            
+              [  "usr\/share\/misc\/magic\/lua" ],
+            
+              [  "usr\/share\/misc\/magic\/luks" ],
+            
+              [  "usr\/share\/misc\/magic\/m4" ],
+            
+              [  "usr\/share\/misc\/magic\/mach" ],
+            
+              [  "usr\/share\/misc\/magic\/macintosh" ],
+            
+              [  "usr\/share\/misc\/magic\/macos" ],
+            
+              [  "usr\/share\/misc\/magic\/magic" ],
+            
+              [  "usr\/share\/misc\/magic\/mail.news" ],
+            
+              [  "usr\/share\/misc\/magic\/make" ],
+            
+              [  "usr\/share\/misc\/magic\/map" ],
+            
+              [  "usr\/share\/misc\/magic\/maple" ],
+            
+              [  "usr\/share\/misc\/magic\/marc21" ],
+            
+              [  "usr\/share\/misc\/magic\/mathcad" ],
+            
+              [  "usr\/share\/misc\/magic\/mathematica" ],
+            
+              [  "usr\/share\/misc\/magic\/matroska" ],
+            
+              [  "usr\/share\/misc\/magic\/mcrypt" ],
+            
+              [  "usr\/share\/misc\/magic\/measure" ],
+            
+              [  "usr\/share\/misc\/magic\/mercurial" ],
+            
+              [  "usr\/share\/misc\/magic\/metastore" ],
+            
+              [  "usr\/share\/misc\/magic\/meteorological" ],
+            
+              [  "usr\/share\/misc\/magic\/microfocus" ],
+            
+              [  "usr\/share\/misc\/magic\/mime" ],
+            
+              [  "usr\/share\/misc\/magic\/mips" ],
+            
+              [  "usr\/share\/misc\/magic\/mirage" ],
+            
+              [  "usr\/share\/misc\/magic\/misctools" ],
+            
+              [  "usr\/share\/misc\/magic\/mkid" ],
+            
+              [  "usr\/share\/misc\/magic\/mlssa" ],
+            
+              [  "usr\/share\/misc\/magic\/mmdf" ],
+            
+              [  "usr\/share\/misc\/magic\/modem" ],
+            
+              [  "usr\/share\/misc\/magic\/modulefile" ],
+            
+              [  "usr\/share\/misc\/magic\/motorola" ],
+            
+              [  "usr\/share\/misc\/magic\/mozilla" ],
+            
+              [  "usr\/share\/misc\/magic\/msdos" ],
+            
+              [  "usr\/share\/misc\/magic\/msooxml" ],
+            
+              [  "usr\/share\/misc\/magic\/msvc" ],
+            
+              [  "usr\/share\/misc\/magic\/msx" ],
+            
+              [  "usr\/share\/misc\/magic\/mup" ],
+            
+              [  "usr\/share\/misc\/magic\/music" ],
+            
+              [  "usr\/share\/misc\/magic\/nasa" ],
+            
+              [  "usr\/share\/misc\/magic\/natinst" ],
+            
+              [  "usr\/share\/misc\/magic\/ncr" ],
+            
+              [  "usr\/share\/misc\/magic\/neko" ],
+            
+              [  "usr\/share\/misc\/magic\/netbsd" ],
+            
+              [  "usr\/share\/misc\/magic\/netscape" ],
+            
+              [  "usr\/share\/misc\/magic\/netware" ],
+            
+              [  "usr\/share\/misc\/magic\/news" ],
+            
+              [  "usr\/share\/misc\/magic\/nitpicker" ],
+            
+              [  "usr\/share\/misc\/magic\/numpy" ],
+            
+              [  "usr\/share\/misc\/magic\/oasis" ],
+            
+              [  "usr\/share\/misc\/magic\/ocaml" ],
+            
+              [  "usr\/share\/misc\/magic\/octave" ],
+            
+              [  "usr\/share\/misc\/magic\/ole2compounddocs" ],
+            
+              [  "usr\/share\/misc\/magic\/olf" ],
+            
+              [  "usr\/share\/misc\/magic\/openfst" ],
+            
+              [  "usr\/share\/misc\/magic\/opentimestamps" ],
+            
+              [  "usr\/share\/misc\/magic\/os2" ],
+            
+              [  "usr\/share\/misc\/magic\/os400" ],
+            
+              [  "usr\/share\/misc\/magic\/os9" ],
+            
+              [  "usr\/share\/misc\/magic\/osf1" ],
+            
+              [  "usr\/share\/misc\/magic\/palm" ],
+            
+              [  "usr\/share\/misc\/magic\/parix" ],
+            
+              [  "usr\/share\/misc\/magic\/parrot" ],
+            
+              [  "usr\/share\/misc\/magic\/pascal" ],
+            
+              [  "usr\/share\/misc\/magic\/pbf" ],
+            
+              [  "usr\/share\/misc\/magic\/pbm" ],
+            
+              [  "usr\/share\/misc\/magic\/pc88" ],
+            
+              [  "usr\/share\/misc\/magic\/pc98" ],
+            
+              [  "usr\/share\/misc\/magic\/pcjr" ],
+            
+              [  "usr\/share\/misc\/magic\/pdf" ],
+            
+              [  "usr\/share\/misc\/magic\/pdp" ],
+            
+              [  "usr\/share\/misc\/magic\/perl" ],
+            
+              [  "usr\/share\/misc\/magic\/pgf" ],
+            
+              [  "usr\/share\/misc\/magic\/pgp" ],
+            
+              [  "usr\/share\/misc\/magic\/pgp-binary-keys" ],
+            
+              [  "usr\/share\/misc\/magic\/pkgadd" ],
+            
+              [  "usr\/share\/misc\/magic\/plan9" ],
+            
+              [  "usr\/share\/misc\/magic\/plus5" ],
+            
+              [  "usr\/share\/misc\/magic\/pmem" ],
+            
+              [  "usr\/share\/misc\/magic\/polyml" ],
+            
+              [  "usr\/share\/misc\/magic\/printer" ],
+            
+              [  "usr\/share\/misc\/magic\/project" ],
+            
+              [  "usr\/share\/misc\/magic\/psdbms" ],
+            
+              [  "usr\/share\/misc\/magic\/psl" ],
+            
+              [  "usr\/share\/misc\/magic\/pulsar" ],
+            
+              [  "usr\/share\/misc\/magic\/pwsafe" ],
+            
+              [  "usr\/share\/misc\/magic\/pyramid" ],
+            
+              [  "usr\/share\/misc\/magic\/python" ],
+            
+              [  "usr\/share\/misc\/magic\/qt" ],
+            
+              [  "usr\/share\/misc\/magic\/revision" ],
+            
+              [  "usr\/share\/misc\/magic\/riff" ],
+            
+              [  "usr\/share\/misc\/magic\/rpi" ],
+            
+              [  "usr\/share\/misc\/magic\/rpm" ],
+            
+              [  "usr\/share\/misc\/magic\/rpmsg" ],
+            
+              [  "usr\/share\/misc\/magic\/rst" ],
+            
+              [  "usr\/share\/misc\/magic\/rtf" ],
+            
+              [  "usr\/share\/misc\/magic\/ruby" ],
+            
+              [  "usr\/share\/misc\/magic\/sc" ],
+            
+              [  "usr\/share\/misc\/magic\/sccs" ],
+            
+              [  "usr\/share\/misc\/magic\/scientific" ],
+            
+              [  "usr\/share\/misc\/magic\/securitycerts" ],
+            
+              [  "usr\/share\/misc\/magic\/selinux" ],
+            
+              [  "usr\/share\/misc\/magic\/sendmail" ],
+            
+              [  "usr\/share\/misc\/magic\/sequent" ],
+            
+              [  "usr\/share\/misc\/magic\/sereal" ],
+            
+              [  "usr\/share\/misc\/magic\/sgi" ],
+            
+              [  "usr\/share\/misc\/magic\/sgml" ],
+            
+              [  "usr\/share\/misc\/magic\/sharc" ],
+            
+              [  "usr\/share\/misc\/magic\/sinclair" ],
+            
+              [  "usr\/share\/misc\/magic\/sisu" ],
+            
+              [  "usr\/share\/misc\/magic\/sketch" ],
+            
+              [  "usr\/share\/misc\/magic\/smalltalk" ],
+            
+              [  "usr\/share\/misc\/magic\/smile" ],
+            
+              [  "usr\/share\/misc\/magic\/sniffer" ],
+            
+              [  "usr\/share\/misc\/magic\/softquad" ],
+            
+              [  "usr\/share\/misc\/magic\/sosi" ],
+            
+              [  "usr\/share\/misc\/magic\/spec" ],
+            
+              [  "usr\/share\/misc\/magic\/spectrum" ],
+            
+              [  "usr\/share\/misc\/magic\/sql" ],
+            
+              [  "usr\/share\/misc\/magic\/ssh" ],
+            
+              [  "usr\/share\/misc\/magic\/ssl" ],
+            
+              [  "usr\/share\/misc\/magic\/statistics" ],
+            
+              [  "usr\/share\/misc\/magic\/sun" ],
+            
+              [  "usr\/share\/misc\/magic\/sylk" ],
+            
+              [  "usr\/share\/misc\/magic\/symbos" ],
+            
+              [  "usr\/share\/misc\/magic\/sysex" ],
+            
+              [  "usr\/share\/misc\/magic\/tcl" ],
+            
+              [  "usr\/share\/misc\/magic\/teapot" ],
+            
+              [  "usr\/share\/misc\/magic\/terminfo" ],
+            
+              [  "usr\/share\/misc\/magic\/tex" ],
+            
+              [  "usr\/share\/misc\/magic\/tgif" ],
+            
+              [  "usr\/share\/misc\/magic\/ti-8x" ],
+            
+              [  "usr\/share\/misc\/magic\/timezone" ],
+            
+              [  "usr\/share\/misc\/magic\/tplink" ],
+            
+              [  "usr\/share\/misc\/magic\/troff" ],
+            
+              [  "usr\/share\/misc\/magic\/tuxedo" ],
+            
+              [  "usr\/share\/misc\/magic\/typeset" ],
+            
+              [  "usr\/share\/misc\/magic\/unicode" ],
+            
+              [  "usr\/share\/misc\/magic\/unisig" ],
+            
+              [  "usr\/share\/misc\/magic\/unknown" ],
+            
+              [  "usr\/share\/misc\/magic\/usd" ],
+            
+              [  "usr\/share\/misc\/magic\/uterus" ],
+            
+              [  "usr\/share\/misc\/magic\/uuencode" ],
+            
+              [  "usr\/share\/misc\/magic\/vacuum-cleaner" ],
+            
+              [  "usr\/share\/misc\/magic\/varied.out" ],
+            
+              [  "usr\/share\/misc\/magic\/varied.script" ],
+            
+              [  "usr\/share\/misc\/magic\/vax" ],
+            
+              [  "usr\/share\/misc\/magic\/vicar" ],
+            
+              [  "usr\/share\/misc\/magic\/virtual" ],
+            
+              [  "usr\/share\/misc\/magic\/virtutech" ],
+            
+              [  "usr\/share\/misc\/magic\/visx" ],
+            
+              [  "usr\/share\/misc\/magic\/vms" ],
+            
+              [  "usr\/share\/misc\/magic\/vmware" ],
+            
+              [  "usr\/share\/misc\/magic\/vorbis" ],
+            
+              [  "usr\/share\/misc\/magic\/vxl" ],
+            
+              [  "usr\/share\/misc\/magic\/warc" ],
+            
+              [  "usr\/share\/misc\/magic\/weak" ],
+            
+              [  "usr\/share\/misc\/magic\/web" ],
+            
+              [  "usr\/share\/misc\/magic\/webassembly" ],
+            
+              [  "usr\/share\/misc\/magic\/windows" ],
+            
+              [  "usr\/share\/misc\/magic\/wireless" ],
+            
+              [  "usr\/share\/misc\/magic\/wordprocessors" ],
+            
+              [  "usr\/share\/misc\/magic\/wsdl" ],
+            
+              [  "usr\/share\/misc\/magic\/x68000" ],
+            
+              [  "usr\/share\/misc\/magic\/xdelta" ],
+            
+              [  "usr\/share\/misc\/magic\/xenix" ],
+            
+              [  "usr\/share\/misc\/magic\/xilinx" ],
+            
+              [  "usr\/share\/misc\/magic\/xo65" ],
+            
+              [  "usr\/share\/misc\/magic\/xwindows" ],
+            
+              [  "usr\/share\/misc\/magic\/yara" ],
+            
+              [  "usr\/share\/misc\/magic\/zfs" ],
+            
+              [  "usr\/share\/misc\/magic\/zilog" ],
+            
+              [  "usr\/share\/misc\/magic\/zip" ],
+            
+              [  "usr\/share\/misc\/magic\/zyxel" ],
+            
+              [  "usr\/share\/misc\/magic.mgc" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

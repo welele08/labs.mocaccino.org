@@ -1,0 +1,2070 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js" integrity="sha512-9+422Bs3A87UkWfp+qV80Nfv9arhbCXKY1rxrF2seorI36mIIstMiuBfyKLF1yH1nnzQkEWq2xrzT4XU3Z+vrA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-Q3qGP1uJL/B0sEmu57PKXjCirgPKMbg73OLRbTJ6lfHCVU5zkHqmcTI5EV2fSoPV1MHdKsCBE7m/aS6q0pPjRQ==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-solarizedlight.min.css" integrity="sha512-fibfhB71IpdEKqLKXP/96WuX1cTMmvZioYp7T6I+lTbvJrrjEGeyYdAf09GHpFptF8toQ32woGZ8bw9+HjZc0A==" crossorigin="anonymous" />
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>mocaccino-os-commons-dev Packages</title>
+</head>
+
+
+<body>
+<section class="hero is-mobile">
+  <div class="hero-body">
+    <div class="container ">
+      <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+            <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> mocaccino-os-commons-dev
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+
+              <h2 class="subtitle">
+
+        List packages and versions available in "mocaccino-os-commons-dev" repository
+             </h2>
+        </div>
+        <div class="column is-half">
+                      <a href="https://github.com/mocaccinoOS/os-commons"><span class="icon has-text-dark 	"> <i class="fas fa-code-branch"></i></span> </a>
+        </div>
+     </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-mobile">
+  <div class="notification is-info">
+    To enable mocaccino-os-commons-dev add in /etc/luet/luet.yaml the following:
+    <pre><code class="language-yaml">repositories:
+  - name: "mocaccino-os-commons-dev"
+    type: ""
+    enable: true
+    urls:
+    - "https://get.mocaccino.org/mocaccino-os-commons"</code></pre>
+  </div>
+
+  <table  data-toggle="table"
+    data-search="true"
+    data-show-columns="true"
+    id="table"  >
+    <thead>
+  
+    <tr>
+        <th data-field="name" ><abbr title="Name">Name</abbr></th>
+        <th data-field="category" >Category</th>
+        <th data-field="version"><abbr title="Version">Version</abbr></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th><abbr title="Name">Name</abbr></th>
+        <th>Category</th>
+        <th><abbr title="Version">Version</abbr></th>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/abrt"> abrt</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/abrt/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/adm"> adm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/adm/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/airdcppd"> airdcppd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/airdcppd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/alias"> alias</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/alias/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/amavis"> amavis</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/amavis/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/amule"> amule</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/amule/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/anope"> anope</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/anope/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/apache"> apache</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/apache/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/aports"> aports</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/aports/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/argus"> argus</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/argus/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/asterisk"> asterisk</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/asterisk/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/atheme-services"> atheme-services</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/atheme-services/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/audio"> audio</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/audio/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/auto-upgrades"> auto-upgrades</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/auto-upgrades/0.1">0.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/automx2"> automx2</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/automx2/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/avahi"> avahi</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/avahi/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/avahi-autoipd"> avahi-autoipd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/avahi-autoipd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bacula"> bacula</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bacula/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bareos"> bareos</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bareos/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bedrock"> bedrock</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bedrock/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bind_exporter"> bind_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bind_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bitcoin"> bitcoin</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bitcoin/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bitlbee"> bitlbee</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/bitlbee/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/buildbot"> buildbot</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/buildbot/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/burp"> burp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/burp/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cadvisor"> cadvisor</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cadvisor/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/carbon"> carbon</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/carbon/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cdrom"> cdrom</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cdrom/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ceph"> ceph</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ceph/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cgit"> cgit</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cgit/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/check-upgrades"> check-upgrades</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/check-upgrades/0.5">0.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/chronograf"> chronograf</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/chronograf/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cinder"> cinder</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cinder/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/clair"> clair</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/clair/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/clamav"> clamav</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/clamav/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino/cli"> cli</a></td>
+          <td class="category">mocaccino</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino/cli/0.2.4">0.2.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cmd5checkpw"> cmd5checkpw</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cmd5checkpw/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/colord"> colord</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/colord/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul"> consul</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul-template"> consul-template</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul-template/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul_exporter"> consul_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/consul_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/croc"> croc</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/croc/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cron"> cron</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cron/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/crontab"> crontab</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/crontab/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cvmfs"> cvmfs</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/cvmfs/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/davfs2"> davfs2</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/davfs2/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dbmail"> dbmail</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dbmail/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ddclient"> ddclient</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ddclient/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/default-protect"> default-protect</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/default-protect/0.20201106">0.20201106</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/default-runit"> default-runit</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/default-runit/0.4">0.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/default-systemd"> default-systemd</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/default-systemd/0.7">0.7</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/deluge"> deluge</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/deluge/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/desktop"> desktop</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/desktop/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/desktop-embedded"> desktop-embedded</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/desktop-embedded/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dhcp"> dhcp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dhcp/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dhcpcd"> dhcpcd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dhcpcd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dialout"> dialout</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dialout/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/disk"> disk</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/disk/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnscrypt-proxy"> dnscrypt-proxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnscrypt-proxy/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsdist"> dnsdist</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsdist/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsmasq"> dnsmasq</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsmasq/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsmasq_exporter"> dnsmasq_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dnsmasq_exporter/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/docker"> docker</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/docker/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/docker_auth"> docker_auth</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/docker_auth/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/dockerd"> dockerd</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/dockerd/20201220&#43;1">20201220&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/dockerd"> dockerd</a></td>
+          <td class="category">systemd-service</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/dockerd/0.2">0.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/donate"> donate</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/donate/0.8">0.8</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dovecot"> dovecot</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dovecot/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dovenull"> dovenull</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/dovenull/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/edgevpn"> edgevpn</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/edgevpn/20210515">20210515</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/edgevpn"> edgevpn</a></td>
+          <td class="category">systemd-service</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/edgevpn/20211011">20211011</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/elasticsearch"> elasticsearch</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/elasticsearch/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/entity-apply"> entity-apply</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/entity-apply/0.5">0.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/epmd"> epmd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/epmd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/etcd"> etcd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/etcd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/exabgp"> exabgp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/exabgp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fetchmail"> fetchmail</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fetchmail/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fhem"> fhem</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fhem/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fingerprint"> fingerprint</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fingerprint/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/flatpak"> flatpak</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/flatpak/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/floppy"> floppy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/floppy/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/flows"> flows</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/flows/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/freenet"> freenet</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/freenet/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/frr"> frr</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/frr/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ftp"> ftp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ftp/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/funtoo"> funtoo</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/funtoo/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fvwm-crystal"> fvwm-crystal</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/fvwm-crystal/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gamemode"> gamemode</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gamemode/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gamestat"> gamestat</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gamestat/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gdm"> gdm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gdm/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/geneweb"> geneweb</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/geneweb/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/geoclue"> geoclue</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/geoclue/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gerbera"> gerbera</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gerbera/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/git"> git</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/git/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gkrellmd"> gkrellmd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gkrellmd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/glance"> glance</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/glance/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gluster"> gluster</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gluster/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gpib"> gpib</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gpib/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/grafana"> grafana</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/grafana/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/graylog"> graylog</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/graylog/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/greetd"> greetd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/greetd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gvm"> gvm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/gvm/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/haproxy"> haproxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/haproxy/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/heat"> heat</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/heat/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/i2p"> i2p</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/i2p/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/i2pd"> i2pd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/i2pd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icinga"> icinga</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icinga/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icingacmd"> icingacmd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icingacmd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icingaweb2"> icingaweb2</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/icingaweb2/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/influxdb"> influxdb</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/influxdb/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/input"> input</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/input/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/inspircd"> inspircd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/inspircd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ipfs"> ipfs</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ipfs/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ipsec"> ipsec</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ipsec/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/jabber"> jabber</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/jabber/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/k3s"> k3s</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/k3s/20210714">20210714</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kafka"> kafka</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kafka/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kapacitor"> kapacitor</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kapacitor/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/keystone"> keystone</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/keystone/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kibana"> kibana</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kibana/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kismet"> kismet</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kismet/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kmem"> kmem</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kmem/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/knot"> knot</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/knot/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-apiserver"> kube-apiserver</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-apiserver/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-controller-manager"> kube-controller-manager</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-controller-manager/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-scheduler"> kube-scheduler</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kube-scheduler/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kvm"> kvm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/kvm/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ldap"> ldap</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ldap/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/libvirt"> libvirt</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/libvirt/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lighttpd"> lighttpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lighttpd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lldpd"> lldpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lldpd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/locate"> locate</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/locate/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/logstash"> logstash</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/logstash/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lp"> lp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lpadmin"> lpadmin</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lpadmin/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lxd"> lxd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/lxd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mail"> mail</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mail/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/man"> man</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/man/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/maradns"> maradns</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/maradns/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/memcached"> memcached</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/memcached/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/messagebus"> messagebus</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/messagebus/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mgraph"> mgraph</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mgraph/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/micro"> micro</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/micro/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/micro-embedded"> micro-embedded</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/micro-embedded/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/milter-regex"> milter-regex</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/milter-regex/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minecraft"> minecraft</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minecraft/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minetest"> minetest</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minetest/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minidlna"> minidlna</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/minidlna/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-calamares"> mocaccino-calamares</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-calamares/0.20210921">0.20210921</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-grub-splash"> mocaccino-grub-splash</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-grub-splash/20210403">20210403</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-icons"> mocaccino-icons</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-icons/0.1">0.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-init"> mocaccino-init</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-init/0.20210828&#43;2">0.20210828&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-live-boot"> mocaccino-live-boot</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-live-boot/0.20200706.2&#43;2">0.20200706.2&#43;2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/init/mocaccino-skel"> mocaccino-skel</a></td>
+          <td class="category">init</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/init/mocaccino-skel/20210703&#43;3">20210703&#43;3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-wallpaper"> mocaccino-wallpaper</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/mocaccino-wallpaper/0.4">0.4</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mongodb"> mongodb</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mongodb/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mongodb_exporter"> mongodb_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mongodb_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/monitorix"> monitorix</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/monitorix/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/monkeysphere"> monkeysphere</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/monkeysphere/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mosquitto"> mosquitto</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mosquitto/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/motion"> motion</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/motion/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/msmtpd"> msmtpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/msmtpd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/munin"> munin</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/munin/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/murmur"> murmur</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/murmur/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mysql"> mysql</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mysql/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mysqld_exporter"> mysqld_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mysqld_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mythtv"> mythtv</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/mythtv/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nagios"> nagios</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nagios/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/named"> named</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/named/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netbox"> netbox</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netbox/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netdata"> netdata</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netdata/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netdev"> netdev</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/netdev/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/neutron"> neutron</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/neutron/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nginx-vts-exporter"> nginx-vts-exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nginx-vts-exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ngircd"> ngircd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ngircd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nm-openconnect"> nm-openconnect</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nm-openconnect/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/node_exporter"> node_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/node_exporter/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nofiles"> nofiles</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nofiles/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nova"> nova</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nova/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nsd"> nsd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nsd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ntp"> ntp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ntp/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/ntpd"> ntpd</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/ntpd/20210802">20210802</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nvpd"> nvpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nvpd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nzbget"> nzbget</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/nzbget/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/octoprint"> octoprint</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/octoprint/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/oidentd"> oidentd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/oidentd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openct"> openct</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openct/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/opendkim"> opendkim</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/opendkim/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openntpd"> openntpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openntpd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openrct2"> openrct2</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openrct2/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openvpn"> openvpn</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openvpn/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openvpn_exporter"> openvpn_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/openvpn_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/oprofile"> oprofile</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/oprofile/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ossec"> ossec</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ossec/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/p2p"> p2p</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/p2p/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pcap"> pcap</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pcap/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pcscd"> pcscd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pcscd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pdns"> pdns</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pdns/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pdnsd"> pdnsd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pdnsd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/placement"> placement</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/placement/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/plex"> plex</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/plex/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/plugdev"> plugdev</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/plugdev/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/polkitd"> polkitd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/polkitd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/polkituser"> polkituser</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/polkituser/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/popa3d"> popa3d</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/popa3d/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/portage"> portage</a></td>
+          <td class="category">mocaccino-release</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino-release/portage/0">0</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/portage"> portage</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/portage/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postdrop"> postdrop</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postdrop/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postfix"> postfix</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postfix/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postfix_exporter"> postfix_exporter</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postfix_exporter/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postgres"> postgres</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postgres/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postmaster"> postmaster</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/postmaster/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/privoxy"> privoxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/privoxy/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/prometheus"> prometheus</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/prometheus/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pulse"> pulse</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pulse/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pulse-access"> pulse-access</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/pulse-access/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/puppet"> puppet</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/puppet/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/puppetdb"> puppetdb</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/puppetdb/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/qemu"> qemu</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/qemu/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/qmail"> qmail</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/qmail/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/quagga"> quagga</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/quagga/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/quassel"> quassel</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/quassel/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/radius"> radius</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/radius/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rbldns"> rbldns</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rbldns/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/realtime"> realtime</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/realtime/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/redis"> redis</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/redis/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/redmine"> redmine</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/redmine/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/render"> render</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/render/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rspamd"> rspamd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rspamd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rstudio-server"> rstudio-server</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rstudio-server/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rtkit"> rtkit</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/rtkit/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/utils/runit-helper"> runit-helper</a></td>
+          <td class="category">utils</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/utils/runit-helper/0.1.1">0.1.1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sabnzbd"> sabnzbd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sabnzbd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sancp"> sancp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sancp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/saned"> saned</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/saned/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sanlock"> sanlock</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sanlock/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/scanner"> scanner</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/scanner/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/scponly"> scponly</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/scponly/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sddm"> sddm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sddm/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sgx"> sgx</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sgx/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/shellinaboxd"> shellinaboxd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/shellinaboxd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/simplevirt"> simplevirt</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/simplevirt/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sks"> sks</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sks/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/slurm"> slurm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/slurm/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smmsp"> smmsp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smmsp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smtpd"> smtpd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smtpd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smtpq"> smtpq</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/smtpq/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/snapserver"> snapserver</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/snapserver/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sniproxy"> sniproxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sniproxy/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sobexsrv"> sobexsrv</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sobexsrv/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sogo"> sogo</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sogo/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spamd"> spamd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spamd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spectrum"> spectrum</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spectrum/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spire"> spire</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/spire/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sqlgrey"> sqlgrey</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sqlgrey/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/squid"> squid</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/squid/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/ssh-systemd"> ssh-systemd</a></td>
+          <td class="category">system-profile</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system-profile/ssh-systemd/0.5">0.5</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sshd"> sshd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/sshd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/sshd"> sshd</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/sshd/20201219">20201219</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stdiscosrv"> stdiscosrv</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stdiscosrv/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/steamcmd"> steamcmd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/steamcmd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/strelaysrv"> strelaysrv</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/strelaysrv/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stubby"> stubby</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stubby/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stunnel"> stunnel</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/stunnel/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/supervisor"> supervisor</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/supervisor/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/suricata"> suricata</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/suricata/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/svnusers"> svnusers</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/svnusers/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/swift"> swift</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/swift/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/syncthing"> syncthing</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/syncthing/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-coredump"> systemd-coredump</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-coredump/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-journal"> systemd-journal</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-journal/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-journal-remote"> systemd-journal-remote</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-journal-remote/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-network"> systemd-network</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-network/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-oom"> systemd-oom</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-oom/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-resolve"> systemd-resolve</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-resolve/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-timesync"> systemd-timesync</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/systemd-timesync/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/tailscaled"> tailscaled</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/tailscaled/20210411">20210411</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tape"> tape</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tape/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/teamspeak"> teamspeak</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/teamspeak/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/telegraf"> telegraf</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/telegraf/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/teleport"> teleport</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/teleport/20201219">20201219</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tinyproxy"> tinyproxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tinyproxy/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/development/toolchain"> toolchain</a></td>
+          <td class="category">development</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/development/toolchain/0.20201217">0.20201217</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tor"> tor</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tor/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tox"> tox</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tox/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/transmission"> transmission</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/transmission/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tsm"> tsm</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tsm/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tss"> tss</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tss/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ttrssd"> ttrssd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ttrssd/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tty"> tty</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/tty/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/turnserver"> turnserver</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/turnserver/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ubridge"> ubridge</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ubridge/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/udevd"> udevd</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/udevd/20210102&#43;1">20210102&#43;1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/udhcpc"> udhcpc</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/udhcpc/20201218">20201218</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ultimaker"> ultimaker</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ultimaker/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino/unattended-install"> unattended-install</a></td>
+          <td class="category">mocaccino</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/mocaccino/unattended-install/0.21">0.21</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unbound"> unbound</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unbound/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unifi"> unifi</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unifi/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unrealircd"> unrealircd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/unrealircd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/upmpcli"> upmpcli</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/upmpcli/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/uptimed"> uptimed</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/uptimed/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/usb"> usb</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/usb/3">3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/users"> users</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/users/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/utmp"> utmp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/utmp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/uucp"> uucp</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/uucp/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/varnish"> varnish</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/varnish/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxguest"> vboxguest</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxguest/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxsf"> vboxsf</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxsf/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxusers"> vboxusers</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vboxusers/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vdradmin"> vdradmin</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vdradmin/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/video"> video</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/video/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vpopmail"> vpopmail</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/vpopmail/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/wesnoth"> wesnoth</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/wesnoth/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/wg"> wg</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/wg/20201220">20201220</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/wheel"> wheel</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/wheel/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/x2goprint"> x2goprint</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/x2goprint/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/x2gouser"> x2gouser</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/x2gouser/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/xmrig"> xmrig</a></td>
+          <td class="category">systemd-service</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/systemd-service/xmrig/0.2">0.2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/xmrig"> xmrig</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/xmrig/20210414">20210414</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/xpra"> xpra</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/xpra/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/xrootd"> xrootd</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/xrootd/1">1</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/yip"> yip</a></td>
+          <td class="category">runit-srv</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/runit-srv/yip/20210423">20210423</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/yip-apply"> yip-apply</a></td>
+          <td class="category">system</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/system/yip-apply/0.6">0.6</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/utils/yip-systemd"> yip-systemd</a></td>
+          <td class="category">utils</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/utils/yip-systemd/0.3">0.3</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ziproxy"> ziproxy</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/ziproxy/2">2</a></td>
+          </tr>
+      
+        <tr>
+          <td class="name"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/znc"> znc</a></td>
+          <td class="category">entity</td>
+          <td class="version"><a href="https://labs.mocaccino.org/mocaccino-os-commons-dev/entity/znc/2">2</a></td>
+          </tr>
+      
+    </tbody>
+  </table>
+
+
+</div>
+
+<script type="text/javascript">
+    $("#table").DataTable();
+</script>
+
+</body>
+
+</html>

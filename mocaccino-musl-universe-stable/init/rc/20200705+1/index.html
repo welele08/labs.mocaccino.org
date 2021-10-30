@@ -1,0 +1,572 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing init/rc-20200705&#43;1 in mocaccino-musl-universe-stable </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> init/rc-20200705&#43;1
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-musl-universe-stable">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-musl-universe-stable
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of init/rc
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 20200705&#43;1  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/lang/execline">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  execline &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/init/s6">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  s6 &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/rc\/LICENSE.md" ],
+            
+              [  "etc\/rc\/README.md" ],
+            
+              [  "etc\/rc\/env\/LANG" ],
+            
+              [  "etc\/rc\/env\/LC_COLLATE" ],
+            
+              [  "etc\/rc\/init" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGHUP" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGINT" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGQUIT" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGTERM" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGUSR1" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/SIGUSR2" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/crash" ],
+            
+              [  "etc\/rc\/run-image\/service\/.s6-svscan\/finish" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-linux-init-early-getty\/run" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-linux-init-runleveld\/notification-fd" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-linux-init-runleveld\/run" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-linux-init-shutdownd\/run" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-svscan-log\/notification-fd" ],
+            
+              [  "etc\/rc\/run-image\/service\/s6-svscan-log\/run" ],
+            
+              [  "etc\/rc\/scripts\/rc.init" ],
+            
+              [  "etc\/rc\/scripts\/rc.shutdown" ],
+            
+              [  "etc\/rc\/scripts\/runlevel" ],
+            
+              [  "etc\/rc\/shutdown" ],
+            
+              [  "etc\/rc\/source\/backlight\/dependencies" ],
+            
+              [  "etc\/rc\/source\/backlight\/down" ],
+            
+              [  "etc\/rc\/source\/backlight\/instances" ],
+            
+              [  "etc\/rc\/source\/backlight\/type" ],
+            
+              [  "etc\/rc\/source\/backlight\/up" ],
+            
+              [  "etc\/rc\/source\/clock\/down" ],
+            
+              [  "etc\/rc\/source\/clock\/type" ],
+            
+              [  "etc\/rc\/source\/clock\/up" ],
+            
+              [  "etc\/rc\/source\/crond\/dependencies" ],
+            
+              [  "etc\/rc\/source\/crond\/run" ],
+            
+              [  "etc\/rc\/source\/crond\/type" ],
+            
+              [  "etc\/rc\/source\/cupsd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/cupsd\/logdir" ],
+            
+              [  "etc\/rc\/source\/cupsd\/run" ],
+            
+              [  "etc\/rc\/source\/cupsd\/type" ],
+            
+              [  "etc\/rc\/source\/default\/contents" ],
+            
+              [  "etc\/rc\/source\/default\/type" ],
+            
+              [  "etc\/rc\/source\/devices\/contents" ],
+            
+              [  "etc\/rc\/source\/devices\/type" ],
+            
+              [  "etc\/rc\/source\/dhcpcd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/dhcpcd\/run" ],
+            
+              [  "etc\/rc\/source\/dhcpcd\/type" ],
+            
+              [  "etc\/rc\/source\/dnsmasq\/dependencies" ],
+            
+              [  "etc\/rc\/source\/dnsmasq\/logdir" ],
+            
+              [  "etc\/rc\/source\/dnsmasq\/run" ],
+            
+              [  "etc\/rc\/source\/dnsmasq\/type" ],
+            
+              [  "etc\/rc\/source\/filesystems\/contents" ],
+            
+              [  "etc\/rc\/source\/filesystems\/type" ],
+            
+              [  "etc\/rc\/source\/firewall\/dependencies" ],
+            
+              [  "etc\/rc\/source\/firewall\/down" ],
+            
+              [  "etc\/rc\/source\/firewall\/type" ],
+            
+              [  "etc\/rc\/source\/firewall\/up" ],
+            
+              [  "etc\/rc\/source\/getty\/dependencies" ],
+            
+              [  "etc\/rc\/source\/getty\/instances" ],
+            
+              [  "etc\/rc\/source\/getty\/run" ],
+            
+              [  "etc\/rc\/source\/getty\/type" ],
+            
+              [  "etc\/rc\/source\/hostname\/type" ],
+            
+              [  "etc\/rc\/source\/hostname\/up" ],
+            
+              [  "etc\/rc\/source\/klogd\/logdir" ],
+            
+              [  "etc\/rc\/source\/klogd\/run" ],
+            
+              [  "etc\/rc\/source\/klogd\/type" ],
+            
+              [  "etc\/rc\/source\/loopback\/down" ],
+            
+              [  "etc\/rc\/source\/loopback\/type" ],
+            
+              [  "etc\/rc\/source\/loopback\/up" ],
+            
+              [  "etc\/rc\/source\/mount-cgroups\/dependencies" ],
+            
+              [  "etc\/rc\/source\/mount-cgroups\/down" ],
+            
+              [  "etc\/rc\/source\/mount-cgroups\/type" ],
+            
+              [  "etc\/rc\/source\/mount-cgroups\/up" ],
+            
+              [  "etc\/rc\/source\/mount-dev\/down" ],
+            
+              [  "etc\/rc\/source\/mount-dev\/type" ],
+            
+              [  "etc\/rc\/source\/mount-dev\/up" ],
+            
+              [  "etc\/rc\/source\/mount-fstab\/dependencies" ],
+            
+              [  "etc\/rc\/source\/mount-fstab\/down" ],
+            
+              [  "etc\/rc\/source\/mount-fstab\/instances" ],
+            
+              [  "etc\/rc\/source\/mount-fstab\/type" ],
+            
+              [  "etc\/rc\/source\/mount-fstab\/up" ],
+            
+              [  "etc\/rc\/source\/mount-swap\/dependencies" ],
+            
+              [  "etc\/rc\/source\/mount-swap\/down" ],
+            
+              [  "etc\/rc\/source\/mount-swap\/type" ],
+            
+              [  "etc\/rc\/source\/mount-swap\/up" ],
+            
+              [  "etc\/rc\/source\/mount-sys\/down" ],
+            
+              [  "etc\/rc\/source\/mount-sys\/type" ],
+            
+              [  "etc\/rc\/source\/mount-sys\/up" ],
+            
+              [  "etc\/rc\/source\/mount-tmp\/down" ],
+            
+              [  "etc\/rc\/source\/mount-tmp\/type" ],
+            
+              [  "etc\/rc\/source\/mount-tmp\/up" ],
+            
+              [  "etc\/rc\/source\/mount-zfs\/dependencies" ],
+            
+              [  "etc\/rc\/source\/mount-zfs\/down" ],
+            
+              [  "etc\/rc\/source\/mount-zfs\/type" ],
+            
+              [  "etc\/rc\/source\/mount-zfs\/up" ],
+            
+              [  "etc\/rc\/source\/networking\/dependencies" ],
+            
+              [  "etc\/rc\/source\/networking\/down" ],
+            
+              [  "etc\/rc\/source\/networking\/type" ],
+            
+              [  "etc\/rc\/source\/networking\/up" ],
+            
+              [  "etc\/rc\/source\/ntpd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/ntpd\/logdir" ],
+            
+              [  "etc\/rc\/source\/ntpd\/run" ],
+            
+              [  "etc\/rc\/source\/ntpd\/type" ],
+            
+              [  "etc\/rc\/source\/nullhttpd\/run" ],
+            
+              [  "etc\/rc\/source\/nullhttpd\/type" ],
+            
+              [  "etc\/rc\/source\/random\/dependencies" ],
+            
+              [  "etc\/rc\/source\/random\/down" ],
+            
+              [  "etc\/rc\/source\/random\/type" ],
+            
+              [  "etc\/rc\/source\/random\/up" ],
+            
+              [  "etc\/rc\/source\/runc\/dependencies" ],
+            
+              [  "etc\/rc\/source\/runc\/instances" ],
+            
+              [  "etc\/rc\/source\/runc\/logdir" ],
+            
+              [  "etc\/rc\/source\/runc\/run" ],
+            
+              [  "etc\/rc\/source\/runc\/type" ],
+            
+              [  "etc\/rc\/source\/smartd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/smartd\/logdir" ],
+            
+              [  "etc\/rc\/source\/smartd\/run" ],
+            
+              [  "etc\/rc\/source\/smartd\/type" ],
+            
+              [  "etc\/rc\/source\/smtpd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/smtpd\/logdir" ],
+            
+              [  "etc\/rc\/source\/smtpd\/run" ],
+            
+              [  "etc\/rc\/source\/smtpd\/type" ],
+            
+              [  "etc\/rc\/source\/ssh-keygen\/dependencies" ],
+            
+              [  "etc\/rc\/source\/ssh-keygen\/type" ],
+            
+              [  "etc\/rc\/source\/ssh-keygen\/up" ],
+            
+              [  "etc\/rc\/source\/sshd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/sshd\/logdir" ],
+            
+              [  "etc\/rc\/source\/sshd\/run" ],
+            
+              [  "etc\/rc\/source\/sshd\/type" ],
+            
+              [  "etc\/rc\/source\/sysctl\/type" ],
+            
+              [  "etc\/rc\/source\/sysctl\/up" ],
+            
+              [  "etc\/rc\/source\/syslogd\/logdir" ],
+            
+              [  "etc\/rc\/source\/syslogd\/notification-fd" ],
+            
+              [  "etc\/rc\/source\/syslogd\/run" ],
+            
+              [  "etc\/rc\/source\/syslogd\/type" ],
+            
+              [  "etc\/rc\/source\/tmpfiles\/dependencies" ],
+            
+              [  "etc\/rc\/source\/tmpfiles\/type" ],
+            
+              [  "etc\/rc\/source\/tmpfiles\/up" ],
+            
+              [  "etc\/rc\/source\/udev-coldplug\/dependencies" ],
+            
+              [  "etc\/rc\/source\/udev-coldplug\/type" ],
+            
+              [  "etc\/rc\/source\/udev-coldplug\/up" ],
+            
+              [  "etc\/rc\/source\/udevd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/udevd\/notification-fd" ],
+            
+              [  "etc\/rc\/source\/udevd\/run" ],
+            
+              [  "etc\/rc\/source\/udevd\/type" ],
+            
+              [  "etc\/rc\/source\/upsd\/dependencies" ],
+            
+              [  "etc\/rc\/source\/upsd\/run" ],
+            
+              [  "etc\/rc\/source\/upsd\/type" ],
+            
+              [  "etc\/rc\/source\/upsdrv\/dependencies" ],
+            
+              [  "etc\/rc\/source\/upsdrv\/instances" ],
+            
+              [  "etc\/rc\/source\/upsdrv\/run" ],
+            
+              [  "etc\/rc\/source\/upsdrv\/type" ],
+            
+              [  "etc\/rc\/source\/upsmon\/dependencies" ],
+            
+              [  "etc\/rc\/source\/upsmon\/logdir" ],
+            
+              [  "etc\/rc\/source\/upsmon\/run" ],
+            
+              [  "etc\/rc\/source\/upsmon\/type" ],
+            
+              [  "etc\/rc\/source\/user-log\/consumer-for" ],
+            
+              [  "etc\/rc\/source\/user-log\/dependencies" ],
+            
+              [  "etc\/rc\/source\/user-log\/instances" ],
+            
+              [  "etc\/rc\/source\/user-log\/notification-fd" ],
+            
+              [  "etc\/rc\/source\/user-log\/run" ],
+            
+              [  "etc\/rc\/source\/user-log\/type" ],
+            
+              [  "etc\/rc\/source\/user-services\/dependencies" ],
+            
+              [  "etc\/rc\/source\/user-services\/instances" ],
+            
+              [  "etc\/rc\/source\/user-services\/producer-for" ],
+            
+              [  "etc\/rc\/source\/user-services\/run" ],
+            
+              [  "etc\/rc\/source\/user-services\/type" ],
+            
+              [  "etc\/rc\/source\/user-session\/dependencies" ],
+            
+              [  "etc\/rc\/source\/user-session\/down" ],
+            
+              [  "etc\/rc\/source\/user-session\/instances" ],
+            
+              [  "etc\/rc\/source\/user-session\/type" ],
+            
+              [  "etc\/rc\/source\/user-session\/up" ],
+            
+              [  "etc\/rc\/source\/user-setup\/dependencies" ],
+            
+              [  "etc\/rc\/source\/user-setup\/down" ],
+            
+              [  "etc\/rc\/source\/user-setup\/instances" ],
+            
+              [  "etc\/rc\/source\/user-setup\/type" ],
+            
+              [  "etc\/rc\/source\/user-setup\/up" ],
+            
+              [  "etc\/rc\/source\/wireguard\/dependencies" ],
+            
+              [  "etc\/rc\/source\/wireguard\/instances" ],
+            
+              [  "etc\/rc\/source\/wireguard\/type" ],
+            
+              [  "etc\/rc\/source\/wireguard\/up" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant\/dependencies" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant\/instances" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant\/run" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant\/type" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant-wired\/dependencies" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant-wired\/instances" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant-wired\/run" ],
+            
+              [  "etc\/rc\/source\/wpa_supplicant-wired\/type" ],
+            
+              [  "etc\/rc\/source\/zed\/dependencies" ],
+            
+              [  "etc\/rc\/source\/zed\/run" ],
+            
+              [  "etc\/rc\/source\/zed\/type" ],
+            
+              [  "etc\/rc\/update" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

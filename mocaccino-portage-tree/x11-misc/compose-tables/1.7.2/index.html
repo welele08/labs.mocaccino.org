@@ -1,0 +1,597 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing x11-misc/compose-tables-1.7.2 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> x11-misc/compose-tables-1.7.2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                X.Org Compose Key tables from libX11
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of x11-misc/compose-tables
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.7.2  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> MIT </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: sys-devel/gnuconfig &gt;=app-portage/elt-patches-20170815 || ( &gt;=sys-devel/automake-1.16.2-r1:1.16 ) &gt;=sys-devel/autoconf-2.69 &gt;=sys-devel/libtool-2.4 x86-winnt? ( &gt;=sys-devel/libtool-2.2.6a sys-devel/m4 &gt;=x11-misc/util-macros-1.18 &gt;=media-fonts/font-util-1.2.0 ) virtual/pkgconfig
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: x11-base/xorg-proto &gt;=x11-libs/libxcb-1.11.1 x11-libs/xtrans
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: !&lt;x11-libs/libX11-1.7.0
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: x11-misc/compose-tables
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: x11-misc/compose-tables
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 1.7.2
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://www.x.org/wiki/%20https://gitlab.freedesktop.org/xorg/util/compose-tables" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://www.x.org/wiki/ https://gitlab.freedesktop.org/xorg/util/compose-tables </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "usr\/share\/X11\/locale\/C\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/C\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/C\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/am_ET.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/am_ET.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/am_ET.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/armscii-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/armscii-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/armscii-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/compose.dir" ],
+            
+              [  "usr\/share\/X11\/locale\/cs_CZ.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/cs_CZ.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/cs_CZ.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/el_GR.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/el_GR.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/el_GR.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/en_US.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/en_US.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/en_US.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/fi_FI.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/fi_FI.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/fi_FI.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-academy\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-academy\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-academy\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-ps\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-ps\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/georgian-ps\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ibm-cp1133\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ibm-cp1133\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ibm-cp1133\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iscii-dev\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iscii-dev\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iscii-dev\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/isiri-3342\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/isiri-3342\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/isiri-3342\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-1\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-1\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-1\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-10\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-10\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-10\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-11\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-11\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-11\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-13\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-13\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-13\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-14\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-14\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-14\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-15\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-15\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-15\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-2\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-2\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-2\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-3\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-3\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-3\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-4\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-4\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-4\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-5\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-5\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-5\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-6\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-6\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-6\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-7\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-7\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-7\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9e\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9e\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/iso8859-9e\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ja\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ja\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ja\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.JIS\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.JIS\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.JIS\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.SJIS\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.SJIS\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ja.SJIS\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ja_JP.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ja_JP.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ja_JP.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/km_KH.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/km_KH.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/km_KH.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ko\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ko\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ko\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ko_KR.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ko_KR.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ko_KR.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-c\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-c\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-c\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-r\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-r\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-r\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-u\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-u\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/koi8-u\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/locale.alias" ],
+            
+              [  "usr\/share\/X11\/locale\/locale.dir" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1251\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1251\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1251\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1255\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1255\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1255\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1256\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1256\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/microsoft-cp1256\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/mulelao-1\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/mulelao-1\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/mulelao-1\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/nokhchi-1\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/nokhchi-1\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/nokhchi-1\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_BR.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_BR.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_BR.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_PT.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_PT.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/pt_PT.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/ru_RU.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/ru_RU.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/ru_RU.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/sr_RS.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/sr_RS.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/sr_RS.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/tatar-cyr\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/tatar-cyr\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/tatar-cyr\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/th_TH.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/tscii-0\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/tscii-0\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/tscii-0\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.tcvn\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.tcvn\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.tcvn\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.viscii\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.viscii\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/vi_VN.viscii\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gb18030\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gb18030\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gb18030\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gbk\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gbk\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_CN.gbk\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5hkscs\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5hkscs\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_HK.big5hkscs\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.UTF-8\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.UTF-8\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.UTF-8\/XLC_LOCALE" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.big5\/Compose" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.big5\/XI18N_OBJS" ],
+            
+              [  "usr\/share\/X11\/locale\/zh_TW.big5\/XLC_LOCALE" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

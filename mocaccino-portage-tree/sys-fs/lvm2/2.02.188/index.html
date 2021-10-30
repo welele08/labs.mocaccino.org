@@ -1,0 +1,641 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing sys-fs/lvm2-2.02.188 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> sys-fs/lvm2-2.02.188
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                User-land utilities for LVM2 (device-mapper) software
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of sys-fs/lvm2
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 2.02.188  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-apps/baselayout">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  baselayout &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-block/thin-provisioning-tools">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  thin-provisioning-tools &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs/readline">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  readline &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: sys-devel/autoconf-archive virtual/pkgconfig sys-devel/gnuconfig &gt;=app-portage/elt-patches-20170815 || ( &gt;=sys-devel/automake-1.16.2-r1:1.16 ) &gt;=sys-devel/autoconf-2.69 &gt;=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: dev-libs/libaio[static-libs?] static? ( dev-libs/libaio[static-libs] ) !static? ( dev-libs/libaio[static-libs?] ) readline? ( sys-libs/readline:0= ) sanlock? ( sys-cluster/sanlock ) systemd? ( &gt;=sys-apps/systemd-205:0= ) udev? ( &gt;=virtual/libudev-208:=[static-libs(-)?] ) static? ( selinux? ( sys-libs/libselinux[static-libs] ) &gt;=sys-apps/util-linux-2.16[static-libs] )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: readline static static-libs systemd lvm2create_initrd sanlock selinux &#43;udev &#43;thin device-mapper-only kernel_linux
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: dev-libs/libaio[static-libs?] static? ( dev-libs/libaio[static-libs] ) !static? ( dev-libs/libaio[static-libs?] ) readline? ( sys-libs/readline:0= ) sanlock? ( sys-cluster/sanlock ) systemd? ( &gt;=sys-apps/systemd-205:0= ) udev? ( &gt;=virtual/libudev-208:=[static-libs(-)?] ) &gt;=sys-apps/baselayout-2.2 !&lt;sys-apps/openrc-0.11 !&lt;sys-fs/cryptsetup-1.1.2 !!sys-fs/lvm-user &gt;=sys-apps/util-linux-2.16 lvm2create_initrd? ( sys-apps/makedev ) thin? ( &gt;=sys-block/thin-provisioning-tools-0.3.0 )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: sys-fs/lvm2
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: sys-fs/lvm2
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 2.02.188
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://sourceware.org/lvm2/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://sourceware.org/lvm2/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/conf.d\/device-mapper" ],
+            
+              [  "etc\/conf.d\/lvm" ],
+            
+              [  "etc\/dmtab" ],
+            
+              [  "etc\/init.d\/device-mapper" ],
+            
+              [  "etc\/init.d\/dmeventd" ],
+            
+              [  "etc\/init.d\/lvm" ],
+            
+              [  "etc\/init.d\/lvm-monitoring" ],
+            
+              [  "etc\/init.d\/lvmetad" ],
+            
+              [  "etc\/init.d\/lvmpolld" ],
+            
+              [  "etc\/lvm\/lvm.conf" ],
+            
+              [  "etc\/lvm\/lvmlocal.conf" ],
+            
+              [  "etc\/lvm\/profile\/cache-mq.profile" ],
+            
+              [  "etc\/lvm\/profile\/cache-smq.profile" ],
+            
+              [  "etc\/lvm\/profile\/command_profile_template.profile" ],
+            
+              [  "etc\/lvm\/profile\/lvmdbusd.profile" ],
+            
+              [  "etc\/lvm\/profile\/metadata_profile_template.profile" ],
+            
+              [  "etc\/lvm\/profile\/thin-generic.profile" ],
+            
+              [  "etc\/lvm\/profile\/thin-performance.profile" ],
+            
+              [  "lib\/systemd\/system\/blk-availability.service" ],
+            
+              [  "lib\/systemd\/system\/dm-event.service" ],
+            
+              [  "lib\/systemd\/system\/dm-event.socket" ],
+            
+              [  "lib\/systemd\/system\/lvm2-lvmetad.service" ],
+            
+              [  "lib\/systemd\/system\/lvm2-lvmetad.socket" ],
+            
+              [  "lib\/systemd\/system\/lvm2-lvmpolld.service" ],
+            
+              [  "lib\/systemd\/system\/lvm2-lvmpolld.socket" ],
+            
+              [  "lib\/systemd\/system\/lvm2-monitor.service" ],
+            
+              [  "lib\/systemd\/system\/lvm2-pvscan@.service" ],
+            
+              [  "lib\/systemd\/system-generators\/lvm2-activation-generator" ],
+            
+              [  "lib\/udev\/rules.d\/10-dm.rules" ],
+            
+              [  "lib\/udev\/rules.d\/11-dm-lvm.rules" ],
+            
+              [  "lib\/udev\/rules.d\/13-dm-disk.rules" ],
+            
+              [  "lib\/udev\/rules.d\/69-dm-lvm-metad.rules" ],
+            
+              [  "lib\/udev\/rules.d\/95-dm-notify.rules" ],
+            
+              [  "lib64\/device-mapper\/libdevmapper-event-lvm2mirror.so" ],
+            
+              [  "lib64\/device-mapper\/libdevmapper-event-lvm2raid.so" ],
+            
+              [  "lib64\/device-mapper\/libdevmapper-event-lvm2snapshot.so" ],
+            
+              [  "lib64\/device-mapper\/libdevmapper-event-lvm2thin.so" ],
+            
+              [  "lib64\/device-mapper\/libdevmapper-event-lvm2vdo.so" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2.so.2.02" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2mirror.so" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2raid.so" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2snapshot.so" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2thin.so" ],
+            
+              [  "lib64\/libdevmapper-event-lvm2vdo.so" ],
+            
+              [  "lib64\/libdevmapper-event.so.1.02" ],
+            
+              [  "lib64\/libdevmapper.so.1.02" ],
+            
+              [  "lib64\/liblvm2app.so.2.2" ],
+            
+              [  "lib64\/liblvm2cmd.so.2.02" ],
+            
+              [  "sbin\/blkdeactivate" ],
+            
+              [  "sbin\/dmeventd" ],
+            
+              [  "sbin\/dmfilemapd" ],
+            
+              [  "sbin\/dmsetup" ],
+            
+              [  "sbin\/dmstats" ],
+            
+              [  "sbin\/fsadm" ],
+            
+              [  "sbin\/lvchange" ],
+            
+              [  "sbin\/lvconvert" ],
+            
+              [  "sbin\/lvcreate" ],
+            
+              [  "sbin\/lvdisplay" ],
+            
+              [  "sbin\/lvextend" ],
+            
+              [  "sbin\/lvm" ],
+            
+              [  "sbin\/lvmconf" ],
+            
+              [  "sbin\/lvmconfig" ],
+            
+              [  "sbin\/lvmdiskscan" ],
+            
+              [  "sbin\/lvmdump" ],
+            
+              [  "sbin\/lvmetad" ],
+            
+              [  "sbin\/lvmpolld" ],
+            
+              [  "sbin\/lvmsadc" ],
+            
+              [  "sbin\/lvmsar" ],
+            
+              [  "sbin\/lvreduce" ],
+            
+              [  "sbin\/lvremove" ],
+            
+              [  "sbin\/lvrename" ],
+            
+              [  "sbin\/lvresize" ],
+            
+              [  "sbin\/lvs" ],
+            
+              [  "sbin\/lvscan" ],
+            
+              [  "sbin\/pvchange" ],
+            
+              [  "sbin\/pvck" ],
+            
+              [  "sbin\/pvcreate" ],
+            
+              [  "sbin\/pvdisplay" ],
+            
+              [  "sbin\/pvmove" ],
+            
+              [  "sbin\/pvremove" ],
+            
+              [  "sbin\/pvresize" ],
+            
+              [  "sbin\/pvs" ],
+            
+              [  "sbin\/pvscan" ],
+            
+              [  "sbin\/vgcfgbackup" ],
+            
+              [  "sbin\/vgcfgrestore" ],
+            
+              [  "sbin\/vgchange" ],
+            
+              [  "sbin\/vgck" ],
+            
+              [  "sbin\/vgconvert" ],
+            
+              [  "sbin\/vgcreate" ],
+            
+              [  "sbin\/vgdisplay" ],
+            
+              [  "sbin\/vgexport" ],
+            
+              [  "sbin\/vgextend" ],
+            
+              [  "sbin\/vgimport" ],
+            
+              [  "sbin\/vgimportclone" ],
+            
+              [  "sbin\/vgmerge" ],
+            
+              [  "sbin\/vgmknodes" ],
+            
+              [  "sbin\/vgreduce" ],
+            
+              [  "sbin\/vgremove" ],
+            
+              [  "sbin\/vgrename" ],
+            
+              [  "sbin\/vgs" ],
+            
+              [  "sbin\/vgscan" ],
+            
+              [  "sbin\/vgsplit" ],
+            
+              [  "usr\/include\/libdevmapper-event.h" ],
+            
+              [  "usr\/include\/libdevmapper.h" ],
+            
+              [  "usr\/include\/lvm2app.h" ],
+            
+              [  "usr\/include\/lvm2cmd.h" ],
+            
+              [  "usr\/lib\/tmpfiles.d\/lvm2.conf" ],
+            
+              [  "usr\/lib64\/libdevmapper-event-lvm2.so" ],
+            
+              [  "usr\/lib64\/libdevmapper-event.so" ],
+            
+              [  "usr\/lib64\/libdevmapper.so" ],
+            
+              [  "usr\/lib64\/liblvm2app.so" ],
+            
+              [  "usr\/lib64\/liblvm2cmd.so" ],
+            
+              [  "usr\/lib64\/pkgconfig\/devmapper-event.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/devmapper.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/lvm2app.pc" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/VERSION" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/VERSION_DM" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/WHATS_NEW.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/WHATS_NEW_DM.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/example.conf.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/example_cmdlib.c.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvm-disk-reading.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvm2-raid.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvm_fault_handling.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvmetad_design.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvmlocal.conf.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/lvmpolld_overview.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/pvmove_outline.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/refactoring.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/tagging.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/testing.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/udev_assembly.txt.bz2" ],
+            
+              [  "usr\/share\/doc\/lvm2-2.02.188\/unit-tests.txt.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/lvm.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/lvmcache.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/lvmraid.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/lvmreport.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/lvmsystemid.7.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/lvmthin.7.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/blkdeactivate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dmeventd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dmfilemapd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dmsetup.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dmstats.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/fsadm.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvchange.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvconvert.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvcreate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvdisplay.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvextend.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvm-config.8" ],
+            
+              [  "usr\/share\/man\/man8\/lvm-dumpconfig.8" ],
+            
+              [  "usr\/share\/man\/man8\/lvm-fullreport.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvm-lvpoll.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvm.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvm2-activation-generator.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmconf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmconfig.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmdiskscan.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmdump.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmetad.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmpolld.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmsadc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvmsar.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvreduce.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvremove.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvrename.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvresize.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvs.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lvscan.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvchange.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvck.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvcreate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvdisplay.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvmove.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvremove.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvresize.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvs.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/pvscan.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgcfgbackup.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgcfgrestore.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgchange.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgck.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgconvert.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgcreate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgdisplay.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgexport.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgextend.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgimport.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgimportclone.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgmerge.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgmknodes.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgreduce.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgremove.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgrename.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgs.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgscan.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vgsplit.8.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

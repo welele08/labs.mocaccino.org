@@ -1,0 +1,611 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing sys-apps/iproute2-5.13.0 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> sys-apps/iproute2-5.13.0
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                kernel routing and traffic control utilities
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of sys-apps/iproute2
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 5.13.0  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/libbpf">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libbpf &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-dialup/linux-atm">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  linux-atm &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/net-firewall/iptables">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  iptables &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs-5.3/db">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  db &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs/libcap">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libcap &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: app-arch/xz-utils &gt;=sys-devel/bison-2.4 sys-devel/flex virtual/pkgconfig
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: !net-misc/arpd !minimal? ( net-libs/libmnl ) atm? ( net-dialup/linux-atm ) berkdb? ( sys-libs/db:= ) bpf? ( dev-libs/libbpf ) caps? ( sys-libs/libcap ) elf? ( virtual/libelf ) iptables? ( &gt;=net-firewall/iptables-1.4.20:= ) libbsd? ( dev-libs/libbsd ) selinux? ( sys-libs/libselinux ) &gt;=sys-kernel/linux-headers-3.16
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: atm berkdb bpf caps elf &#43;iptables ipv6 libbsd minimal selinux
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: !net-misc/arpd !minimal? ( net-libs/libmnl ) atm? ( net-dialup/linux-atm ) berkdb? ( sys-libs/db:= ) bpf? ( dev-libs/libbpf ) caps? ( sys-libs/libcap ) elf? ( virtual/libelf ) iptables? ( &gt;=net-firewall/iptables-1.4.20:= ) libbsd? ( dev-libs/libbsd ) selinux? ( sys-libs/libselinux )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: sys-apps/iproute2
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: sys-apps/iproute2
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 5.13.0
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://wiki.linuxfoundation.org/networking/iproute2" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://wiki.linuxfoundation.org/networking/iproute2 </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "bin\/ip" ],
+            
+              [  "etc\/iproute2\/bpf_pinning" ],
+            
+              [  "etc\/iproute2\/ematch_map" ],
+            
+              [  "etc\/iproute2\/group" ],
+            
+              [  "etc\/iproute2\/nl_protos" ],
+            
+              [  "etc\/iproute2\/rt_dsfield" ],
+            
+              [  "etc\/iproute2\/rt_protos" ],
+            
+              [  "etc\/iproute2\/rt_realms" ],
+            
+              [  "etc\/iproute2\/rt_scopes" ],
+            
+              [  "etc\/iproute2\/rt_tables" ],
+            
+              [  "lib64\/tc\/experimental.dist" ],
+            
+              [  "lib64\/tc\/m_ipt.so" ],
+            
+              [  "lib64\/tc\/m_xt.so" ],
+            
+              [  "lib64\/tc\/normal.dist" ],
+            
+              [  "lib64\/tc\/pareto.dist" ],
+            
+              [  "lib64\/tc\/paretonormal.dist" ],
+            
+              [  "lib64\/tc\/q_atm.so" ],
+            
+              [  "sbin\/bridge" ],
+            
+              [  "sbin\/ctstat" ],
+            
+              [  "sbin\/dcb" ],
+            
+              [  "sbin\/devlink" ],
+            
+              [  "sbin\/genl" ],
+            
+              [  "sbin\/ifcfg" ],
+            
+              [  "sbin\/ifstat" ],
+            
+              [  "sbin\/lnstat" ],
+            
+              [  "sbin\/nstat" ],
+            
+              [  "sbin\/rdma" ],
+            
+              [  "sbin\/routef" ],
+            
+              [  "sbin\/routel" ],
+            
+              [  "sbin\/rtacct" ],
+            
+              [  "sbin\/rtmon" ],
+            
+              [  "sbin\/rtpr" ],
+            
+              [  "sbin\/rtstat" ],
+            
+              [  "sbin\/ss" ],
+            
+              [  "sbin\/tc" ],
+            
+              [  "sbin\/tipc" ],
+            
+              [  "sbin\/vdpa" ],
+            
+              [  "usr\/bin\/arpd" ],
+            
+              [  "usr\/include\/iproute2\/bpf_elf.h" ],
+            
+              [  "usr\/include\/libnetlink.h" ],
+            
+              [  "usr\/lib64\/libnetlink.a" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/devlink" ],
+            
+              [  "usr\/share\/bash-completion\/completions\/tc" ],
+            
+              [  "usr\/share\/man\/man3\/libnetlink.3.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/tc-hfsc.7.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/arpd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/bridge.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ctstat.8" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-app.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-buffer.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-dcbx.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-ets.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-maxrate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb-pfc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/dcb.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-dev.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-dpipe.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-health.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-monitor.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-port.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-region.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-resource.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-sb.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink-trap.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/devlink.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/genl.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ifcfg.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ifstat.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-address.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-addrlabel.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-fou.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-gue.8" ],
+            
+              [  "usr\/share\/man\/man8\/ip-l2tp.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-link.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-macsec.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-maddress.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-monitor.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-mptcp.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-mroute.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-neighbour.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-netconf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-netns.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-nexthop.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-ntable.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-route.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-rule.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-sr.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-tcp_metrics.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-token.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-tunnel.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-vrf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip-xfrm.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/ip.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/lnstat.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/nstat.8" ],
+            
+              [  "usr\/share\/man\/man8\/rdma-dev.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rdma-link.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rdma-resource.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rdma-statistic.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rdma-system.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rdma.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/routef.8" ],
+            
+              [  "usr\/share\/man\/man8\/routel.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rtacct.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rtmon.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rtpr.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/rtstat.8" ],
+            
+              [  "usr\/share\/man\/man8\/ss.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-actions.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-basic.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-bfifo.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-bpf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-cake.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-cbq-details.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-cbq.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-cbs.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-cgroup.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-choke.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-codel.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-connmark.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-csum.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-ct.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-ctinfo.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-drr.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-ematch.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-etf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-ets.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-flow.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-flower.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-fq.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-fq_codel.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-fq_pie.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-fw.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-gate.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-hfsc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-htb.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-ife.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-matchall.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-mirred.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-mpls.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-mqprio.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-nat.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-netem.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-pedit.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-pfifo.8" ],
+            
+              [  "usr\/share\/man\/man8\/tc-pfifo_fast.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-pie.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-police.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-prio.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-red.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-route.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-sample.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-sfb.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-sfq.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-simple.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-skbedit.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-skbmod.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-skbprio.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-stab.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-taprio.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-tbf.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-tcindex.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-tunnel_key.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-u32.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-vlan.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc-xt.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-bearer.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-link.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-media.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-nametable.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-node.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-peer.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc-socket.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/tipc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vdpa-dev.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vdpa-mgmtdev.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/vdpa.8.bz2" ],
+            
+              [  "var\/lib\/arpd\/.keep_sys-apps_iproute2-0" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing shells/bash-5.0 in mocaccino-micro-stable </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> shells/bash-5.0
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-micro-stable">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-micro-stable
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of shells/bash
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 5.0  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> GPL-3 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/system/musl">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  musl &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> autobump.strategy: tag
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> autobump.string_replace: { &#34;_&#34;: &#34;.&#34; }
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> autobump.version_contains: _
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.owner: bminor
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.repo: bash
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="http://tiswww.case.edu/php/chet/bash/bashtop.html" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> http://tiswww.case.edu/php/chet/bash/bashtop.html </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "bin\/bash" ],
+            
+              [  "bin\/bashbug" ],
+            
+              [  "include\/bash\/alias.h" ],
+            
+              [  "include\/bash\/array.h" ],
+            
+              [  "include\/bash\/arrayfunc.h" ],
+            
+              [  "include\/bash\/assoc.h" ],
+            
+              [  "include\/bash\/bashansi.h" ],
+            
+              [  "include\/bash\/bashintl.h" ],
+            
+              [  "include\/bash\/bashjmp.h" ],
+            
+              [  "include\/bash\/bashtypes.h" ],
+            
+              [  "include\/bash\/builtins\/bashgetopt.h" ],
+            
+              [  "include\/bash\/builtins\/builtext.h" ],
+            
+              [  "include\/bash\/builtins\/common.h" ],
+            
+              [  "include\/bash\/builtins\/getopt.h" ],
+            
+              [  "include\/bash\/builtins.h" ],
+            
+              [  "include\/bash\/command.h" ],
+            
+              [  "include\/bash\/config-bot.h" ],
+            
+              [  "include\/bash\/config-top.h" ],
+            
+              [  "include\/bash\/config.h" ],
+            
+              [  "include\/bash\/conftypes.h" ],
+            
+              [  "include\/bash\/dispose_cmd.h" ],
+            
+              [  "include\/bash\/error.h" ],
+            
+              [  "include\/bash\/externs.h" ],
+            
+              [  "include\/bash\/general.h" ],
+            
+              [  "include\/bash\/hashlib.h" ],
+            
+              [  "include\/bash\/include\/ansi_stdlib.h" ],
+            
+              [  "include\/bash\/include\/chartypes.h" ],
+            
+              [  "include\/bash\/include\/filecntl.h" ],
+            
+              [  "include\/bash\/include\/gettext.h" ],
+            
+              [  "include\/bash\/include\/maxpath.h" ],
+            
+              [  "include\/bash\/include\/memalloc.h" ],
+            
+              [  "include\/bash\/include\/ocache.h" ],
+            
+              [  "include\/bash\/include\/posixdir.h" ],
+            
+              [  "include\/bash\/include\/posixjmp.h" ],
+            
+              [  "include\/bash\/include\/posixstat.h" ],
+            
+              [  "include\/bash\/include\/posixtime.h" ],
+            
+              [  "include\/bash\/include\/posixwait.h" ],
+            
+              [  "include\/bash\/include\/shmbchar.h" ],
+            
+              [  "include\/bash\/include\/shmbutil.h" ],
+            
+              [  "include\/bash\/include\/shtty.h" ],
+            
+              [  "include\/bash\/include\/stat-time.h" ],
+            
+              [  "include\/bash\/include\/stdc.h" ],
+            
+              [  "include\/bash\/include\/systimes.h" ],
+            
+              [  "include\/bash\/include\/typemax.h" ],
+            
+              [  "include\/bash\/include\/unionwait.h" ],
+            
+              [  "include\/bash\/jobs.h" ],
+            
+              [  "include\/bash\/make_cmd.h" ],
+            
+              [  "include\/bash\/pathnames.h" ],
+            
+              [  "include\/bash\/quit.h" ],
+            
+              [  "include\/bash\/shell.h" ],
+            
+              [  "include\/bash\/sig.h" ],
+            
+              [  "include\/bash\/siglist.h" ],
+            
+              [  "include\/bash\/signames.h" ],
+            
+              [  "include\/bash\/subst.h" ],
+            
+              [  "include\/bash\/syntax.h" ],
+            
+              [  "include\/bash\/unwind_prot.h" ],
+            
+              [  "include\/bash\/variables.h" ],
+            
+              [  "include\/bash\/version.h" ],
+            
+              [  "include\/bash\/xmalloc.h" ],
+            
+              [  "include\/bash\/y.tab.h" ],
+            
+              [  "lib\/bash\/Makefile.inc" ],
+            
+              [  "lib\/bash\/basename" ],
+            
+              [  "lib\/bash\/dirname" ],
+            
+              [  "lib\/bash\/fdflags" ],
+            
+              [  "lib\/bash\/finfo" ],
+            
+              [  "lib\/bash\/head" ],
+            
+              [  "lib\/bash\/id" ],
+            
+              [  "lib\/bash\/ln" ],
+            
+              [  "lib\/bash\/loadables.h" ],
+            
+              [  "lib\/bash\/logname" ],
+            
+              [  "lib\/bash\/mkdir" ],
+            
+              [  "lib\/bash\/mypid" ],
+            
+              [  "lib\/bash\/pathchk" ],
+            
+              [  "lib\/bash\/print" ],
+            
+              [  "lib\/bash\/printenv" ],
+            
+              [  "lib\/bash\/push" ],
+            
+              [  "lib\/bash\/realpath" ],
+            
+              [  "lib\/bash\/rmdir" ],
+            
+              [  "lib\/bash\/seq" ],
+            
+              [  "lib\/bash\/setpgid" ],
+            
+              [  "lib\/bash\/sleep" ],
+            
+              [  "lib\/bash\/strftime" ],
+            
+              [  "lib\/bash\/sync" ],
+            
+              [  "lib\/bash\/tee" ],
+            
+              [  "lib\/bash\/truefalse" ],
+            
+              [  "lib\/bash\/tty" ],
+            
+              [  "lib\/bash\/uname" ],
+            
+              [  "lib\/bash\/unlink" ],
+            
+              [  "lib\/bash\/whoami" ],
+            
+              [  "lib\/pkgconfig\/bash.pc" ],
+            
+              [  "share\/doc\/bash\/CHANGES" ],
+            
+              [  "share\/doc\/bash\/COMPAT" ],
+            
+              [  "share\/doc\/bash\/FAQ" ],
+            
+              [  "share\/doc\/bash\/INTRO" ],
+            
+              [  "share\/doc\/bash\/NEWS" ],
+            
+              [  "share\/doc\/bash\/POSIX" ],
+            
+              [  "share\/doc\/bash\/RBASH" ],
+            
+              [  "share\/doc\/bash\/README" ],
+            
+              [  "share\/doc\/bash\/bash.html" ],
+            
+              [  "share\/doc\/bash\/bashref.html" ],
+            
+              [  "share\/info\/bash.info" ],
+            
+              [  "share\/locale\/af\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/bg\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/ca\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/cs\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/da\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/de\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/el\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/en@boldquot\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/en@quot\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/eo\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/es\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/et\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/fi\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/fr\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/ga\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/gl\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/hr\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/hu\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/id\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/it\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/ja\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/lt\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/nb\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/nl\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/pl\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/pt\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/pt_BR\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/ro\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/ru\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/sk\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/sl\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/sr\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/sv\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/tr\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/uk\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/vi\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/zh_CN\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/locale\/zh_TW\/LC_MESSAGES\/bash.mo" ],
+            
+              [  "share\/man\/man1\/bash.1" ],
+            
+              [  "share\/man\/man1\/bashbug.1" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

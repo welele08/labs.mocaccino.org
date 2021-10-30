@@ -1,0 +1,685 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing app-crypt/mit-krb5-1.19.2 in mocaccino-portage-tree </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> app-crypt/mit-krb5-1.19.2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                MIT Kerberos V
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of app-crypt/mit-krb5
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.19.2  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA CC-BY-SA-3.0 || ( BSD-2 GPL-2&#43; ) </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-db/lmdb">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  lmdb &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/libverto">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libverto &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/openssl">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openssl &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-apps/keyutils">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  keyutils &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-apps/xinetd">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  xinetd &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-devel/gettext">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  gettext &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/sys-libs/e2fsprogs-libs">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  e2fsprogs-libs &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> BDEPEND: || ( dev-lang/python:3.9 dev-lang/python:3.8 ) virtual/yacc cpu_flags_x86_aes? ( amd64? ( dev-lang/yasm ) x86? ( dev-lang/yasm ) ) doc? ( virtual/latex-base ) test? ( || ( dev-lang/python:3.9 dev-lang/python:3.8 ) dev-lang/tcl:0 dev-util/dejagnu dev-util/cmocka ) sys-devel/gnuconfig &gt;=app-portage/elt-patches-20170815 || ( &gt;=sys-devel/automake-1.16.2-r1:1.16 ) &gt;=sys-devel/autoconf-2.69 &gt;=sys-devel/libtool-2.4 virtual/pkgconfig
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> DEPEND: !!app-crypt/heimdal &gt;=sys-libs/e2fsprogs-libs-1.42.9[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] || ( &gt;=dev-libs/libverto-0.2.5[libev,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] &gt;=dev-libs/libverto-0.2.5[libevent,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) keyutils? ( &gt;=sys-apps/keyutils-1.5.8:=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) lmdb? ( dev-db/lmdb ) nls? ( sys-devel/gettext[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) openldap? ( &gt;=net-nds/openldap-2.4.38-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) pkinit? ( &gt;=dev-libs/openssl-1.0.1h-r2:0=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) xinetd? ( sys-apps/xinetd )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> IUSE: cpu_flags_x86_aes doc &#43;keyutils lmdb nls openldap &#43;pkinit selinux &#43;threads test xinetd abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> RDEPEND: !!app-crypt/heimdal &gt;=sys-libs/e2fsprogs-libs-1.42.9[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] || ( &gt;=dev-libs/libverto-0.2.5[libev,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] &gt;=dev-libs/libverto-0.2.5[libevent,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) keyutils? ( &gt;=sys-apps/keyutils-1.5.8:=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) lmdb? ( dev-db/lmdb ) nls? ( sys-devel/gettext[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) openldap? ( &gt;=net-nds/openldap-2.4.38-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) pkinit? ( &gt;=dev-libs/openssl-1.0.1h-r2:0=[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) xinetd? ( sys-apps/xinetd ) selinux? ( sec-policy/selinux-kerberos )
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: app-crypt/mit-krb5
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> kit: gentoo
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: app-crypt/mit-krb5
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 1.19.2
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://web.mit.edu/kerberos/www/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://web.mit.edu/kerberos/www/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/conf.d\/mit-krb5kadmind" ],
+            
+              [  "etc\/conf.d\/mit-krb5kdc" ],
+            
+              [  "etc\/conf.d\/mit-krb5kpropd" ],
+            
+              [  "etc\/init.d\/mit-krb5kadmind" ],
+            
+              [  "etc\/init.d\/mit-krb5kdc" ],
+            
+              [  "etc\/init.d\/mit-krb5kpropd" ],
+            
+              [  "etc\/krb5.conf.example" ],
+            
+              [  "etc\/xinetd.d\/kpropd" ],
+            
+              [  "lib\/systemd\/system\/mit-krb5kadmind.service" ],
+            
+              [  "lib\/systemd\/system\/mit-krb5kdc.service" ],
+            
+              [  "lib\/systemd\/system\/mit-krb5kpropd.service" ],
+            
+              [  "lib\/systemd\/system\/mit-krb5kpropd.socket" ],
+            
+              [  "lib\/systemd\/system\/mit-krb5kpropd@.service" ],
+            
+              [  "usr\/bin\/gss-client" ],
+            
+              [  "usr\/bin\/i686-pc-linux-gnu-krb5-config" ],
+            
+              [  "usr\/bin\/k5srvutil" ],
+            
+              [  "usr\/bin\/kadmin" ],
+            
+              [  "usr\/bin\/kdestroy" ],
+            
+              [  "usr\/bin\/kinit" ],
+            
+              [  "usr\/bin\/klist" ],
+            
+              [  "usr\/bin\/kpasswd" ],
+            
+              [  "usr\/bin\/krb5-config" ],
+            
+              [  "usr\/bin\/ksu" ],
+            
+              [  "usr\/bin\/kswitch" ],
+            
+              [  "usr\/bin\/ktutil" ],
+            
+              [  "usr\/bin\/kvno" ],
+            
+              [  "usr\/bin\/sclient" ],
+            
+              [  "usr\/bin\/sim_client" ],
+            
+              [  "usr\/bin\/uuclient" ],
+            
+              [  "usr\/bin\/x86_64-pc-linux-gnu-krb5-config" ],
+            
+              [  "usr\/include\/gssapi\/gssapi.h" ],
+            
+              [  "usr\/include\/gssapi\/gssapi_alloc.h" ],
+            
+              [  "usr\/include\/gssapi\/gssapi_ext.h" ],
+            
+              [  "usr\/include\/gssapi\/gssapi_generic.h" ],
+            
+              [  "usr\/include\/gssapi\/gssapi_krb5.h" ],
+            
+              [  "usr\/include\/gssapi\/mechglue.h" ],
+            
+              [  "usr\/include\/gssapi.h" ],
+            
+              [  "usr\/include\/gssrpc\/auth.h" ],
+            
+              [  "usr\/include\/gssrpc\/auth_gss.h" ],
+            
+              [  "usr\/include\/gssrpc\/auth_gssapi.h" ],
+            
+              [  "usr\/include\/gssrpc\/auth_unix.h" ],
+            
+              [  "usr\/include\/gssrpc\/clnt.h" ],
+            
+              [  "usr\/include\/gssrpc\/netdb.h" ],
+            
+              [  "usr\/include\/gssrpc\/pmap_clnt.h" ],
+            
+              [  "usr\/include\/gssrpc\/pmap_prot.h" ],
+            
+              [  "usr\/include\/gssrpc\/pmap_rmt.h" ],
+            
+              [  "usr\/include\/gssrpc\/rename.h" ],
+            
+              [  "usr\/include\/gssrpc\/rpc.h" ],
+            
+              [  "usr\/include\/gssrpc\/rpc_msg.h" ],
+            
+              [  "usr\/include\/gssrpc\/svc.h" ],
+            
+              [  "usr\/include\/gssrpc\/svc_auth.h" ],
+            
+              [  "usr\/include\/gssrpc\/types.h" ],
+            
+              [  "usr\/include\/gssrpc\/xdr.h" ],
+            
+              [  "usr\/include\/kadm5\/admin.h" ],
+            
+              [  "usr\/include\/kadm5\/chpass_util_strings.h" ],
+            
+              [  "usr\/include\/kadm5\/kadm_err.h" ],
+            
+              [  "usr\/include\/kdb.h" ],
+            
+              [  "usr\/include\/krad.h" ],
+            
+              [  "usr\/include\/krb5\/ccselect_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/certauth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/clpreauth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/hostrealm_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/kadm5_auth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/kadm5_hook_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/kdcpolicy_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/kdcpreauth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/krb5.h" ],
+            
+              [  "usr\/include\/krb5\/localauth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/locate_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/plugin.h" ],
+            
+              [  "usr\/include\/krb5\/preauth_plugin.h" ],
+            
+              [  "usr\/include\/krb5\/pwqual_plugin.h" ],
+            
+              [  "usr\/include\/krb5.h" ],
+            
+              [  "usr\/include\/profile.h" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/kdb\/db2.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/kdb\/klmdb.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/preauth\/otp.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/preauth\/pkinit.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/preauth\/spake.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/preauth\/test.so" ],
+            
+              [  "usr\/lib\/krb5\/plugins\/tls\/k5tls.so" ],
+            
+              [  "usr\/lib\/libgssapi_krb5.so" ],
+            
+              [  "usr\/lib\/libgssapi_krb5.so.2" ],
+            
+              [  "usr\/lib\/libgssapi_krb5.so.2.2" ],
+            
+              [  "usr\/lib\/libgssrpc.so" ],
+            
+              [  "usr\/lib\/libgssrpc.so.4" ],
+            
+              [  "usr\/lib\/libgssrpc.so.4.2" ],
+            
+              [  "usr\/lib\/libk5crypto.so" ],
+            
+              [  "usr\/lib\/libk5crypto.so.3" ],
+            
+              [  "usr\/lib\/libk5crypto.so.3.1" ],
+            
+              [  "usr\/lib\/libkadm5clnt.so" ],
+            
+              [  "usr\/lib\/libkadm5clnt_mit.so" ],
+            
+              [  "usr\/lib\/libkadm5clnt_mit.so.12" ],
+            
+              [  "usr\/lib\/libkadm5clnt_mit.so.12.0" ],
+            
+              [  "usr\/lib\/libkadm5srv.so" ],
+            
+              [  "usr\/lib\/libkadm5srv_mit.so" ],
+            
+              [  "usr\/lib\/libkadm5srv_mit.so.12" ],
+            
+              [  "usr\/lib\/libkadm5srv_mit.so.12.0" ],
+            
+              [  "usr\/lib\/libkdb5.so" ],
+            
+              [  "usr\/lib\/libkdb5.so.10" ],
+            
+              [  "usr\/lib\/libkdb5.so.10.0" ],
+            
+              [  "usr\/lib\/libkrad.so" ],
+            
+              [  "usr\/lib\/libkrad.so.0" ],
+            
+              [  "usr\/lib\/libkrad.so.0.0" ],
+            
+              [  "usr\/lib\/libkrb5.so" ],
+            
+              [  "usr\/lib\/libkrb5.so.3" ],
+            
+              [  "usr\/lib\/libkrb5.so.3.3" ],
+            
+              [  "usr\/lib\/libkrb5support.so" ],
+            
+              [  "usr\/lib\/libkrb5support.so.0" ],
+            
+              [  "usr\/lib\/libkrb5support.so.0.1" ],
+            
+              [  "usr\/lib\/pkgconfig\/gssrpc.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/kadm-client.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/kadm-server.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/kdb.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/krb5-gssapi.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/krb5.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/mit-krb5-gssapi.pc" ],
+            
+              [  "usr\/lib\/pkgconfig\/mit-krb5.pc" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/kdb\/db2.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/kdb\/klmdb.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/preauth\/otp.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/preauth\/pkinit.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/preauth\/spake.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/preauth\/test.so" ],
+            
+              [  "usr\/lib64\/krb5\/plugins\/tls\/k5tls.so" ],
+            
+              [  "usr\/lib64\/libgssapi_krb5.so" ],
+            
+              [  "usr\/lib64\/libgssapi_krb5.so.2" ],
+            
+              [  "usr\/lib64\/libgssapi_krb5.so.2.2" ],
+            
+              [  "usr\/lib64\/libgssrpc.so" ],
+            
+              [  "usr\/lib64\/libgssrpc.so.4" ],
+            
+              [  "usr\/lib64\/libgssrpc.so.4.2" ],
+            
+              [  "usr\/lib64\/libk5crypto.so" ],
+            
+              [  "usr\/lib64\/libk5crypto.so.3" ],
+            
+              [  "usr\/lib64\/libk5crypto.so.3.1" ],
+            
+              [  "usr\/lib64\/libkadm5clnt.so" ],
+            
+              [  "usr\/lib64\/libkadm5clnt_mit.so" ],
+            
+              [  "usr\/lib64\/libkadm5clnt_mit.so.12" ],
+            
+              [  "usr\/lib64\/libkadm5clnt_mit.so.12.0" ],
+            
+              [  "usr\/lib64\/libkadm5srv.so" ],
+            
+              [  "usr\/lib64\/libkadm5srv_mit.so" ],
+            
+              [  "usr\/lib64\/libkadm5srv_mit.so.12" ],
+            
+              [  "usr\/lib64\/libkadm5srv_mit.so.12.0" ],
+            
+              [  "usr\/lib64\/libkdb5.so" ],
+            
+              [  "usr\/lib64\/libkdb5.so.10" ],
+            
+              [  "usr\/lib64\/libkdb5.so.10.0" ],
+            
+              [  "usr\/lib64\/libkrad.so" ],
+            
+              [  "usr\/lib64\/libkrad.so.0" ],
+            
+              [  "usr\/lib64\/libkrad.so.0.0" ],
+            
+              [  "usr\/lib64\/libkrb5.so" ],
+            
+              [  "usr\/lib64\/libkrb5.so.3" ],
+            
+              [  "usr\/lib64\/libkrb5.so.3.3" ],
+            
+              [  "usr\/lib64\/libkrb5support.so" ],
+            
+              [  "usr\/lib64\/libkrb5support.so.0" ],
+            
+              [  "usr\/lib64\/libkrb5support.so.0.1" ],
+            
+              [  "usr\/lib64\/pkgconfig\/gssrpc.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/kadm-client.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/kadm-server.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/kdb.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/krb5-gssapi.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/krb5.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/mit-krb5-gssapi.pc" ],
+            
+              [  "usr\/lib64\/pkgconfig\/mit-krb5.pc" ],
+            
+              [  "usr\/sbin\/gss-server" ],
+            
+              [  "usr\/sbin\/kadmin.local" ],
+            
+              [  "usr\/sbin\/kadmind" ],
+            
+              [  "usr\/sbin\/kdb5_util" ],
+            
+              [  "usr\/sbin\/kprop" ],
+            
+              [  "usr\/sbin\/kpropd" ],
+            
+              [  "usr\/sbin\/kproplog" ],
+            
+              [  "usr\/sbin\/krb5-send-pr" ],
+            
+              [  "usr\/sbin\/krb5kdc" ],
+            
+              [  "usr\/sbin\/sim_server" ],
+            
+              [  "usr\/sbin\/sserver" ],
+            
+              [  "usr\/sbin\/uuserver" ],
+            
+              [  "usr\/share\/doc\/mit-krb5-1.19.2\/README.bz2" ],
+            
+              [  "usr\/share\/doc\/mit-krb5-1.19.2\/examples\/kdc.conf.bz2" ],
+            
+              [  "usr\/share\/doc\/mit-krb5-1.19.2\/examples\/krb5.conf.bz2" ],
+            
+              [  "usr\/share\/doc\/mit-krb5-1.19.2\/examples\/services.append.bz2" ],
+            
+              [  "usr\/share\/locale\/de\/LC_MESSAGES\/mit-krb5.mo" ],
+            
+              [  "usr\/share\/locale\/en_US\/LC_MESSAGES\/mit-krb5.mo" ],
+            
+              [  "usr\/share\/man\/man1\/k5srvutil.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kadmin.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kdestroy.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kinit.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/klist.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kpasswd.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/krb5-config.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/ksu.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kswitch.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/ktutil.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/kvno.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/sclient.1.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/.k5identity.5" ],
+            
+              [  "usr\/share\/man\/man5\/.k5login.5" ],
+            
+              [  "usr\/share\/man\/man5\/k5identity.5.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/k5login.5.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/kadm5.acl.5.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/kdc.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man5\/krb5.conf.5.bz2" ],
+            
+              [  "usr\/share\/man\/man7\/kerberos.7.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kadmin.local.8" ],
+            
+              [  "usr\/share\/man\/man8\/kadmind.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kdb5_ldap_util.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kdb5_util.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kprop.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kpropd.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/kproplog.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/krb5kdc.8.bz2" ],
+            
+              [  "usr\/share\/man\/man8\/sserver.8.bz2" ],
+            
+              [  "var\/lib\/krb5kdc\/.keep_app-crypt_mit-krb5-0" ],
+            
+              [  "var\/lib\/krb5kdc\/kdc.conf.example" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1629 @@
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing www-client/chromium-86.0.4240.193&#43;2 in mocaccino-portage-tree-stable </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href="https://labs.mocaccino.org"><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> www-client/chromium-86.0.4240.193&#43;2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="https://labs.mocaccino.org/mocaccino-portage-tree-stable">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     mocaccino-portage-tree-stable
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of www-client/chromium
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 86.0.4240.193&#43;2  </strong> <br>
+
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> BSD </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+<h1> Requires </h1>
+<div class="container">
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/system-x">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  system-x &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/app-arch/snappy">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  snappy &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/plasma">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  plasma &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/layers/X">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  X &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs-2/libxml2">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  libxml2 &gt;=2.9.4-r3 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/media-libs/openh264">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  openh264 &gt;=1.6.0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/re2">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  re2 &gt;=0.2019.08.01 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/app-arch/bzip2">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  bzip2 &gt;=0 </a>
+  </a>
+  </span>
+  
+  <span class="tag">
+  <a href="https://labs.mocaccino.org/find/dev-libs/expat">  <span class="icon has-text-dark is-medium"> <i class="fas fa-box-open"></i></span>  expat &gt;=0 </a>
+  </a>
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> emerge.packages: www-client/chromium
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.name: www-client/chromium
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> original.package.version: 86.0.4240.193
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://chromium.org/" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://chromium.org/ </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "etc\/chromium\/default" ],
+            
+              [  "usr\/bin\/chromedriver" ],
+            
+              [  "usr\/bin\/chromium" ],
+            
+              [  "usr\/bin\/chromium-browser" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chrome" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chrome-sandbox" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chrome_100_percent.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chrome_200_percent.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chromedriver" ],
+            
+              [  "usr\/lib64\/chromium-browser\/chromium-launcher.sh" ],
+            
+              [  "usr\/lib64\/chromium-browser\/headless_lib.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/libEGL.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/libGLESv2.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/libVkICD_mock_icd.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/libvk_swiftshader.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/libvulkan.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/am.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/am.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ar.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ar.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/bg.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/bg.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/bn.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/bn.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ca.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ca.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/cs.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/cs.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/da.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/da.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/de.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/de.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/el.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/el.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/en-GB.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/en-GB.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/en-US.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/en-US.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/es-419.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/es-419.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/es.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/es.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/et.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/et.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fa.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fa.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fi.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fi.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fil.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fil.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fr.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/fr.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/gu.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/gu.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/he.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/he.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hi.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hi.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hr.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hr.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hu.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/hu.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/id.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/id.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/it.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/it.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ja.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ja.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/kn.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/kn.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ko.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ko.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/lt.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/lt.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/lv.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/lv.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ml.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ml.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/mr.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/mr.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ms.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ms.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/nb.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/nb.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/nl.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/nl.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pl.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pl.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pt-BR.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pt-BR.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pt-PT.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/pt-PT.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ro.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ro.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ru.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ru.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sk.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sk.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sl.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sl.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sr.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sr.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sv.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sv.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sw.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/sw.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ta.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/ta.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/te.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/te.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/th.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/th.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/tr.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/tr.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/uk.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/uk.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/vi.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/vi.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/zh-CN.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/zh-CN.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/zh-TW.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/locales\/zh-TW.pak.info" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-back.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-bottom.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-front.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-left.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-right.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/accelerometer-top.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/checkboxCheckmark.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/checker.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chevrons.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeDisabledSelect.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeDisabledSelect_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeLeft.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeMiddle.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeRight.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeSelect.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/chromeSelect_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/cssoverview_icons_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/errorWave.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/ic_info_black_18dp.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/ic_show_node_16x16.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/ic_suggest_color.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/ic_warning_black_18dp.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/largeIcons.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/lighthouse_logo.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/mediumIcons.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/navigationControls.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/navigationControls_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/nodeIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/popoverArrows.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/profileGroupIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/profileIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/profileSmallIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/radioDot-dark-theme.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/radioDot.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeDiagonal.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeDiagonal_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeHorizontal.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeHorizontal_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeVertical.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resizeVertical_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourceCSSIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourceDocumentIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourceDocumentIconSmall.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourceJSIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourcePlainIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourcePlainIconSmall.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/resourcesTimeGraphIcon.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/searchNext.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/searchPrev.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/securityIcons.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/smallIcons.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/speech.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/toolbarResizerVertical.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/touchCursor.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/touchCursor_2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/treeoutlineTriangles.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Images\/whatsnew.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/RuntimeInstantiator.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/Tests.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/ARIAAttributesView.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/ARIAMetadata.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AXBreadcrumbsPane.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AccessibilityModel.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AccessibilityNodeView.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AccessibilitySidebarView.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AccessibilityStrings.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/AccessibilitySubPane.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/SourceOrderView.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/accessibility-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/accessibility.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility\/accessibility_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/accessibility_test_runner\/accessibility_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/animation\/animation-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/animation\/animation.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/animation\/animation_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/application_test_runner\/application_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/axe_core_test_runner\/axe_core_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/bindings\/bindings-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/bindings\/bindings.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/bindings_test_runner\/bindings_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/browser_debugger\/browser_debugger-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/browser_debugger\/browser_debugger.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/browser_debugger\/browser_debugger_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/browser_sdk\/browser_sdk-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/browser_sdk\/browser_sdk.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/changes\/changes-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/changes\/changes.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/changes\/changes_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/client_variations\/client_variations.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/client_variations\/client_variations_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cm\/cm.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cm\/cm_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cm_headless\/cm_headless.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cm_modes\/cm_modes.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cm_modes\/cm_modes_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/color_picker\/color_picker-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/color_picker\/color_picker.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/color_picker\/color_picker_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/common\/common-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/common\/common.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/component_helpers\/component_helpers.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/components\/components-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/components\/components.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console\/console-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console\/console.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console\/console_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console_counters\/console_counters-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console_counters\/console_counters.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/console_test_runner\/console_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cookie_table\/cookie_table-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cookie_table\/cookie_table.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cookie_table\/cookie_table_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/coverage\/coverage-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/coverage\/coverage.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/coverage\/coverage_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/coverage_test_runner\/coverage_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/cpu_profiler_test_runner\/cpu_profiler_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/css_overview\/css_overview-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/css_overview\/css_overview.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/css_overview\/css_overview_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/dagre_layout\/dagre_layout_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/data_grid\/data_grid-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/data_grid\/data_grid.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/data_grid\/data_grid_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/data_grid_test_runner\/data_grid_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/developer_resources\/developer_resources-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/developer_resources\/developer_resources.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/developer_resources\/developer_resources_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/device_mode_test_runner\/device_mode_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devices\/devices.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devices\/devices_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devtools_app.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devtools_app.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devtools_compatibility.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/devtools_extension_api.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/diff\/diff-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/diff\/diff.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/diff\/diff_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/dom_extension\/dom_extension.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/elements\/elements-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/elements\/elements.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/elements\/elements_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/elements_test_runner\/elements_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/MotoG4-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/MotoG4-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/Nexus5X-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/Nexus5X-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/Nexus6P-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/Nexus6P-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/emulated_devices_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-default-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-default-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-keyboard-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-keyboard-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-navigation-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-horizontal-navigation-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-default-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-default-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-keyboard-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-keyboard-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-navigation-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5-vertical-navigation-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-default-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-default-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-keyboard-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-keyboard-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-navigation-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-horizontal-navigation-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-default-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-default-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-keyboard-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-keyboard-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-navigation-1x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/google-nexus-5x-vertical-navigation-2x.png" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPad-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPad-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone5-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone5-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone6-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone6-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone6Plus-landscape.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulated_devices\/iPhone6Plus-portrait.svg" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulation\/emulation-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/emulation\/emulation.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/event_listeners\/event_listeners-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/event_listeners\/event_listeners.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/event_listeners\/event_listeners_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/extensions\/extensions-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/extensions\/extensions.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/extensions_test_runner\/extensions_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/formatter\/formatter-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/formatter\/formatter.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/formatter\/formatter_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/formatter_worker\/formatter_worker.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/formatter_worker_entrypoint.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/har_importer\/har_importer-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/har_importer\/har_importer.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/har_importer\/har_importer_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_profiler_test_runner\/heap_profiler_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_model\/heap_snapshot_model-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_model\/heap_snapshot_model.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_model\/heap_snapshot_model_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_worker\/heap_snapshot_worker-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_worker\/heap_snapshot_worker.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_worker\/heap_snapshot_worker_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/heap_snapshot_worker_entrypoint.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/help\/help-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/help\/help.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/help\/help_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/host\/host-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/host\/host.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/i18n\/i18n-bundle.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inline_editor\/inline_editor-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inline_editor\/inline_editor.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inline_editor\/inline_editor_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/input\/input-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/input\/input.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/input\/input_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inspector.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inspector.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inspector_main\/inspector_main-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/inspector_main\/inspector_main.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/integration_test_runner.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/integration_test_runner.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/issues\/issues-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/issues\/issues.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/issues\/issues_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/javascript_metadata\/javascript_metadata-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/javascript_metadata\/javascript_metadata.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/javascript_metadata\/javascript_metadata_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/js_app.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/js_app.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/js_main\/js_main-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/js_main\/js_main.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/js_profiler\/js_profiler_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layer_viewer\/layer_viewer-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layer_viewer\/layer_viewer.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layer_viewer\/layer_viewer_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layers\/layers-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layers\/layers.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layers\/layers_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/layers_test_runner\/layers_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse\/lighthouse-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse\/lighthouse.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse\/lighthouse_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse_test_runner\/lighthouse_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse_worker\/lighthouse_worker_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/lighthouse_worker.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/main\/main-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/main\/main.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/marked\/marked.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/marked\/marked_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/media\/media-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/media\/media.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/media\/media_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/mobile_throttling\/mobile_throttling-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/mobile_throttling\/mobile_throttling.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/ndb_app.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/ndb_app.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/network\/network-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/network\/network.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/network\/network_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/network_test_runner\/network_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/node_app.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/node_app.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/node_debugger\/node_debugger_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/node_main\/node_main-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/node_main\/node_main.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/object_ui\/object_ui-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/object_ui\/object_ui.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/object_ui\/object_ui_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/perf_ui\/perf_ui-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/perf_ui\/perf_ui.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/perf_ui\/perf_ui_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/performance_monitor\/performance_monitor-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/performance_monitor\/performance_monitor.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/performance_monitor\/performance_monitor_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/performance_test_runner\/performance_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/persistence\/persistence-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/persistence\/persistence.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/platform\/platform.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/profiler\/profiler-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/profiler\/profiler.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/profiler\/profiler_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/protocol_client\/protocol_client-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/protocol_client\/protocol_client.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/protocol_monitor\/protocol_monitor-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/protocol_monitor\/protocol_monitor.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/protocol_monitor\/protocol_monitor_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/quick_open\/quick_open-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/quick_open\/quick_open.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/quick_open\/quick_open_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/resources\/resources-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/resources\/resources.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/resources\/resources_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/root\/root-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/root\/root.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/root.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/screencast\/screencast-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/screencast\/screencast.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/sdk-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/sdk.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/wasm_source_map\/pkg\/wasm_source_map.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/wasm_source_map\/pkg\/wasm_source_map.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/wasm_source_map\/pkg\/wasm_source_map_bg.wasm" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk\/wasm_source_map\/wasm_source_map-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sdk_test_runner\/sdk_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/search\/search-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/search\/search.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/search\/search_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/security\/security-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/security\/security.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/security\/security_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/security_test_runner\/security_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/services\/services-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/services\/services.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/settings\/settings-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/settings\/settings.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/settings\/settings_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/shell.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/snippets\/snippets-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/snippets\/snippets.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/snippets\/snippets_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/source_frame\/source_frame-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/source_frame\/source_frame.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/source_frame\/source_frame_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sources\/sources-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sources\/sources.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sources\/sources_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/sources_test_runner\/sources_test_runner_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/test_runner\/test_runner.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/text_editor\/text_editor-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/text_editor\/text_editor.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/text_editor\/text_editor_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/text_utils\/text_utils-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/text_utils\/text_utils.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/theme_support\/theme_support.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/acorn-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/acorn.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/package\/dist\/acorn.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/package\/dist\/acorn.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/package\/dist\/acorn.mjs" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/package\/dist\/acorn.mjs.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn\/package\/dist\/acorn.mjs.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-logical-assignment\/acorn-logical-assignment-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-logical-assignment\/package\/dist\/acorn-logical-assignment.mjs" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-logical-assignment\/package\/dist\/acorn-logical-assignment.mjs.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-logical-assignment\/package\/dist\/acorn-logical-assignment.mjs.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-loose\/acorn-loose-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-loose\/package\/dist\/acorn-loose.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-loose\/package\/dist\/acorn-loose.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-loose\/package\/dist\/acorn-loose.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-loose\/package\/dist\/acorn-loose.mjs" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-numeric-separator\/acorn-numeric-separator-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-numeric-separator\/package\/dist\/acorn-numeric-separator.mjs" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-numeric-separator\/package\/dist\/acorn-numeric-separator.mjs.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/acorn-numeric-separator\/package\/dist\/acorn-numeric-separator.mjs.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/chromium\/chromium-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/chromium\/client-variations\/ClientVariations.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/chromium\/client-variations\/ClientVariations.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/codemirror-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/comment\/comment.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/comment\/comment.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/edit\/closebrackets.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/edit\/closebrackets.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/edit\/matchbrackets.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/edit\/matchbrackets.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/brace-fold.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/brace-fold.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/foldcode.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/foldcode.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/foldgutter.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/fold\/foldgutter.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/multiplex.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/multiplex.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/overlay.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/overlay.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/simple.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/mode\/simple.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/runmode\/runmode-standalone.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/runmode\/runmode-standalone.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/selection\/active-line.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/selection\/active-line.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/selection\/mark-selection.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/addon\/selection\/mark-selection.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/lib\/codemirror.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/lib\/codemirror.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/clike\/clike.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/clike\/clike.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/clojure\/clojure.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/clojure\/clojure.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/coffeescript\/coffeescript.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/coffeescript\/coffeescript.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/css\/css.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/css\/css.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/htmlembedded\/htmlembedded.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/htmlembedded\/htmlembedded.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/htmlmixed\/htmlmixed.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/htmlmixed\/htmlmixed.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/javascript\/javascript.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/javascript\/javascript.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/jsx\/jsx.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/jsx\/jsx.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/livescript\/livescript.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/livescript\/livescript.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/markdown\/markdown.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/markdown\/markdown.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/php\/php.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/php\/php.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/python\/python.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/python\/python.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/shell\/shell.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/shell\/shell.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/wast\/wast.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/wast\/wast.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/xml\/xml.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/codemirror\/package\/mode\/xml\/xml.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ar-XB.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ar.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/bg.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ca.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/cs.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/da.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/de.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/el.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/en-GB.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/en-US.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/en-XA.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/en-XL.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/es-419.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/es.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/fi.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/fil.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/fr.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/he.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/hi.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/hr.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/hu.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/id.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/it.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ja.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ko.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/lt.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/lv.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/nl.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/no.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/pl.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/pt-PT.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/pt.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ro.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ru.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/sk.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/sl.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/sr-Latn.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/sr.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/sv.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/ta.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/te.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/th.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/tr.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/uk.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/vi.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/zh-HK.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/zh-TW.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lighthouse\/locales\/zh.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/lit-html-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/lit-html.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/class-map.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/class-map.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/class-map.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/if-defined.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/if-defined.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/directives\/if-defined.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/default-template-processor.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/default-template-processor.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/default-template-processor.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/directive.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/directive.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/directive.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/dom.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/dom.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/dom.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/part.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/part.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/part.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/parts.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/parts.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/parts.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/render.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/render.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/render.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-factory.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-factory.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-factory.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-instance.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-instance.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-instance.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-result.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-result.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template-result.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lib\/template.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lit-html.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lit-html.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/lit-html\/package\/lit-html.js.map" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/marked\/marked-tsconfig.json" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/marked\/package\/lib\/marked.esm.d.ts" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/third_party\/marked\/package\/lib\/marked.esm.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline\/timeline-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline\/timeline.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline\/timeline_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline_model\/timeline_model-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline_model\/timeline_model.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/timeline_model\/timeline_model_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/toolbox.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/toolbox.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/toolbox_bootstrap\/toolbox_bootstrap.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/ui\/ui-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/ui\/ui.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/ui\/utils\/utils.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/wasmparser_worker\/wasmparser_worker.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/wasmparser_worker_entrypoint.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/web_audio\/graph_visualizer\/graph_visualizer.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/web_audio\/web_audio-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/web_audio\/web_audio.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/web_audio\/web_audio_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/webauthn\/webauthn-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/webauthn\/webauthn.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/webauthn\/webauthn_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/worker_app.html" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/worker_app.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/worker_main\/worker_main-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/worker_main\/worker_main.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/worker_service\/worker_service.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/workspace\/workspace-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/workspace\/workspace.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/workspace_diff\/workspace_diff-legacy.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/workspace_diff\/workspace_diff.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector\/workspace_diff\/workspace_diff_module.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/common.css" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/inspector_overlay_resources.grd" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_distances.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_highlight.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_highlight_grid.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_paused.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_screenshot.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_source_order.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources\/inspector_overlay\/tool_viewport_size.js" ],
+            
+              [  "usr\/lib64\/chromium-browser\/resources.pak" ],
+            
+              [  "usr\/lib64\/chromium-browser\/snapshot_blob.bin" ],
+            
+              [  "usr\/lib64\/chromium-browser\/swiftshader\/libEGL.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/swiftshader\/libGLESv2.so" ],
+            
+              [  "usr\/lib64\/chromium-browser\/v8_context_snapshot.bin" ],
+            
+              [  "usr\/share\/applications\/chromium-browser-chromium.desktop" ],
+            
+              [  "usr\/share\/doc\/chromium-86.0.4240.193\/README.gentoo.bz2" ],
+            
+              [  "usr\/share\/gnome-control-center\/default-apps\/chromium-browser.xml" ],
+            
+              [  "usr\/share\/icons\/hicolor\/128x128\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/16x16\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/24x24\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/256x256\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/32x32\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/48x48\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/icons\/hicolor\/64x64\/apps\/chromium-browser.png" ],
+            
+              [  "usr\/share\/man\/man1\/chromium-browser.1.bz2" ],
+            
+              [  "usr\/share\/man\/man1\/chromium.1.bz2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
